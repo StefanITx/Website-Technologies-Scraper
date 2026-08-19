@@ -1,0 +1,9 @@
+[
+  {"technology": "WordPress", "category": "cms", "source": "html_body", "match_type": "contains", "pattern": "-js-extra", "confidence": 0.85},
+  {"technology": "WordPress", "category": "cms", "source": "html_body", "match_type": "regex", "pattern": "WordPress ([0-9.]+)", "confidence": 0.90},
+
+  {"technology": "WordPress", "category": "cms", "source": "headers", "field": "x-nginx-cache", "match_type": "contains", "pattern": "WordPress", "confidence": 0.90},
+  
+
+  {"technology": "Squarespace", "category": "cms", "source": "headers", "field": "server", "match_type": "contains", "pattern": "Squarespace", "confidence": 0.90}
+]
