@@ -1,0 +1,2696 @@
+[
+  {
+    "domain_name": "231selfstorage.com",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://231selfstorage.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "chavchavadze-m2-41-tbilisi.booked.net",
+    "status_code": 404,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://chavchavadze-m2-41-tbilisi.booked.net/",
+    "technologies": []
+  },
+  {
+    "domain_name": "xn--kleoghvidevareservice-qfc.dk",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://xn--kleoghvidevareservice-qfc.dk/",
+    "technologies": []
+  },
+  {
+    "domain_name": "jcmobilecigars.com",
+    "status_code": 404,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://www.jcmobilecigars.com/",
+    "technologies": [
+      {
+        "technology": "Squarespace",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "headers",
+            "contains": "server: Squarespace",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "5starremoval.weebly.com",
+    "status_code": 404,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://5starremoval.weebly.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "trs-energycontrol.de",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.trs-energycontrol.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "somalidisablesupport.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://somalidisablesupport.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          },
+          {
+            "source": "headers",
+            "contains": "x-nginx-cache: WordPress",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "yourfamilylines.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://yourfamilylines.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "szentkristofudvarhaz.hu",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://szentkristofudvarhaz.hu/",
+    "technologies": []
+  },
+  {
+    "domain_name": "globalrn.com",
+    "status_code": 526,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://globalrn.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "newbeaverborough.org",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://newbeaverborough.org/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "rsthealthcare.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://rsthealthcare.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "msc-manching.de",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://msc-manching.de/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.2.11",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "jobresourcecentre.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://jobresourcecentre.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "38inspect.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.38inspect.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "fsbwyoming.com",
+    "status_code": 400,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://fsbwyoming.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "ferienwohnung-kastell.de",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://ferienwohnung-kastell.geo.io",
+    "technologies": []
+  },
+  {
+    "domain_name": "doortodoororganics.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://doortodoororganics.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "velvety.eu",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.velvety-cosmetics.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "fisherinvestments.com",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://fisherinvestments.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "coastwidemechanicalcentralcoast.com.au",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://coastwidemechanicalcentralcoast.com.au/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "doringpoort.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://doringpoort.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "lojatatical.com.br",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://lojatatical.com.br/",
+    "technologies": []
+  },
+  {
+    "domain_name": "stwannas.com",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://www.stwannas.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "kentpropertyrenovations.co.uk",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://kentpropertyrenovations.co.uk/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.9.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "familybroker.cz",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://familybroker.cz/",
+    "technologies": []
+  },
+  {
+    "domain_name": "5w.design",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://5w.design/",
+    "technologies": []
+  },
+  {
+    "domain_name": "amourfinder.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.amourfinder.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "marien-apotheke-grefrath-app.de",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.marien-apotheke-grefrath-app.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "genesisny.net",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://genesisny.net/",
+    "technologies": []
+  },
+  {
+    "domain_name": "cytofastmed.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.cytofastmed.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "11853prospecthill.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://11853prospecthill.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "avocatalinamanciu.ro",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://avocatalinamanciu.ro/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "passwordstore.it",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://passwordstore.it/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "rionecontrastanga.net",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://rionecontrastanga.net/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.5.10",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "huberautomotive.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.huberautomotive.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "4stonebuildings.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://4stonebuildings.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "abcdpinturas.com.br",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://abcdpinturas.com.br/",
+    "technologies": []
+  },
+  {
+    "domain_name": "empresasori.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://empresasori.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.3.10",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "natedea.co.uk",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://natedea.co.uk/",
+    "technologies": []
+  },
+  {
+    "domain_name": "dssfla.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.dssfla.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          },
+          {
+            "source": "headers",
+            "contains": "x-nginx-cache: WordPress",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "haus-muehlenfeld-pommerby.de",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://haus-muehlenfeld-pommerby.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "arenaskolor.se",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://arenaskolor.se/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.8.8",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "loizillon.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.loizillon.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "boken.ch",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://boken.ch/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.2.11",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "weducars.co.za",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://weducars.co.za/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "restwellstreetmedicalcentre.com.au",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://restwellstreetmedicalcentre.com.au/",
+    "technologies": []
+  },
+  {
+    "domain_name": "aida-cruises.at",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://aida-cruises.at/",
+    "technologies": []
+  },
+  {
+    "domain_name": "maniaupiekszania.pl",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://maniaupiekszania.pl/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "lets.gr",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://lets.gr/",
+    "technologies": []
+  },
+  {
+    "domain_name": "sprucemeadowsmd.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://sprucemeadowsmd.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "2020wealthadvisory.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://2020wealthadvisory.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "den-a-sha.co.jp",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://den-a-sha.co.jp/",
+    "technologies": []
+  },
+  {
+    "domain_name": "aaice.net",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://aaice.net/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "centreconsiliereavort.ro",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://centreconsiliereavort.ro/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "itsolutions24.pl",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://itsolutions24.pl/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.1",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "mehmetefendimacedonia.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://mehmetefendimacedonia.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "2ldm.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://2ldm.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "laplumedelisibilite.fr",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.laplumedelisibilite.fr/",
+    "technologies": []
+  },
+  {
+    "domain_name": "skywayrestaurants.net",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://skywayrestaurants.net/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "ecolab.com",
+    "status_code": 504,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://www.ecolab.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "hnafirm.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.hnafirm.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "1planettechnologies.weebly.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://1planettechnologies.weebly.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "soziale-dreigliederung.de",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "http://soziale-dreigliederung.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "365outsource.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.365outsource.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "produkttheater.de",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://produkttheater.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "bas-ingenieria.cl",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://bas-ingenieria.cl/",
+    "technologies": []
+  },
+  {
+    "domain_name": "westchesterpointechiro.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.westchesterpointechiro.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "premierhomeremodeling.net",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://premierhomeremodeling.net/",
+    "technologies": []
+  },
+  {
+    "domain_name": "3strandschurch.org",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://3strandschurch.org/",
+    "technologies": []
+  },
+  {
+    "domain_name": "seringa-safaris.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://seringa-safaris.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "antikebau.de",
+    "status_code": 500,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://antikebau.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "unnames.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://unnames.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "handycars.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.handycars.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "sevecoitalia.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.sevecoitalia.com",
+    "technologies": []
+  },
+  {
+    "domain_name": "resourceservicesolutions.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://resourceservicesolutions.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "3xd.co.uk",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://3xd.co.uk/",
+    "technologies": []
+  },
+  {
+    "domain_name": "nielsbirk.dk",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.karllund.dk/",
+    "technologies": []
+  },
+  {
+    "domain_name": "coenzwezerijnen.nu",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://coenzwezerijnen.nu/",
+    "technologies": []
+  },
+  {
+    "domain_name": "roccofortehotels.cn",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.roccofortehotels.cn/",
+    "technologies": []
+  },
+  {
+    "domain_name": "branson-connection.com",
+    "status_code": null,
+    "status": "Connection Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "gutendorf.ru",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://gutendorf.ru/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.2.2",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "gapconstructionwi.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.gapconstructionwi.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "europeaninns.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://europeaninns.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "gogroupauto.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.gogroupauto.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "3bsexcavating.com",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://3bsexcavating.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "alabamabuildingcontractor.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.alabamabuildingcontractor.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "radxmobile.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.radxmobile.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "clotting-guide.online",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.clotting-guide.online/de/ueber/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "2-com.net",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://2-com.net/",
+    "technologies": []
+  },
+  {
+    "domain_name": "cultivateventures.co.nz",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://cultivateventures.co.nz/",
+    "technologies": [
+      {
+        "technology": "Squarespace",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "headers",
+            "contains": "server: Squarespace",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "katesworldtravel.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://katesworldtravel.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.1",
+            "confidence": 0.9
+          },
+          {
+            "source": "headers",
+            "contains": "x-nginx-cache: WordPress",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "disneystore.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.disneystore.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "959marine.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.959marine.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "solvos.nl",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.solvos.nl/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.2",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "costa-coffee.be",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.costa-coffee.be/",
+    "technologies": []
+  },
+  {
+    "domain_name": "253media.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.253media.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "phucankhanggroup.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://phucankhanggroup.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "3dwealthadvisory.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://3dwealthadvisory.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "dioxoxigenio.com.br",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://dioxoxigenio.com.br/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "lscms.org",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://lscms.org/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "juanmunozhomesmart.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.juanmunozhomesmart.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "cei-expertises.fr",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.cei-expertises.fr/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.8.8",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "nevsproductions.com",
+    "status_code": null,
+    "status": "SSL Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "orifoodsco.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.orifoodsco.com/",
+    "technologies": [
+      {
+        "technology": "Squarespace",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "headers",
+            "contains": "server: Squarespace",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "infoaboutnetwork.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.infoaboutnetwork.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "jackwills.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.jackwills.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "makpharma-eg.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://makpharma-eg.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "kande-hoikuen.ed.jp",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://kande-hoikuen.ed.jp/",
+    "technologies": []
+  },
+  {
+    "domain_name": "ejc-courtage-assurances.fr",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://ejc-courtage-assurances.fr/",
+    "technologies": []
+  },
+  {
+    "domain_name": "insieme.stanford.edu",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://insieme.stanford.edu/",
+    "technologies": []
+  },
+  {
+    "domain_name": "layer7innovations.ca",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://layer7innovations.ca/",
+    "technologies": []
+  },
+  {
+    "domain_name": "deerfieldbeachautomall.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.deerfieldbeachautomall.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "mysterion.hr",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://mysterion.hr/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 5.0.22",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "lorenz-baumarkt.de",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.lorenz-baumarkt.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "skywardspeech.com.au",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.skywardspeech.com.au/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.4.10",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "eclairage-solaire-occitanie.com",
+    "status_code": 404,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://eclairage-solaire-occitanie.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "wglchurch.com",
+    "status_code": null,
+    "status": "Connection Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "cmc01village.com",
+    "status_code": 404,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://cmc01village.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "cmresolutions.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://cmresolutions.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "howellmotors.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.howellmotors.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "littlerockafamily.de",
+    "status_code": null,
+    "status": "Connection Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "maiquotes.net",
+    "status_code": null,
+    "status": "SSL Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "sdmdjentertainment.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://sdmdjentertainment.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "ferrateoxidant.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://ferrateoxidant.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.4.10",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "evelynanders.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://evelynanders.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "ideenhunger.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.ideenhunger.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "oakwell.vet",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://oakwell.vet/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "domekvefaru.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.domekvefaru.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "jenniferbacksteininteriors.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.jenniferbacksteininteriors.com/",
+    "technologies": [
+      {
+        "technology": "Squarespace",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "headers",
+            "contains": "server: Squarespace",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "stoperbis.pl",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://stoperbis.pl/",
+    "technologies": []
+  },
+  {
+    "domain_name": "powercleaning.services",
+    "status_code": null,
+    "status": "Connection Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "elcolegiocongresosyrestaurante.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://elcolegiocongresosyrestaurante.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "allegrocreditbeta.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://allegrocreditbeta.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "a3sec.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://a3sec.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "concrete-fitness.edan.io",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://concrete-fitness.edan.io/",
+    "technologies": []
+  },
+  {
+    "domain_name": "nicholsonchiro.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://nicholsonchiro.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "dorpsbelangen.nu",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.dorpsbelangen.nu/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "disinfestazioniepiscine.it",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.disinfestazioniepiscine.it/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.9.7",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "la-residenza-del-principe-rome-it.booked.net",
+    "status_code": 404,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://la-residenza-del-principe-rome-it.booked.net/",
+    "technologies": []
+  },
+  {
+    "domain_name": "xn--jobvrkstedet-9cb.nu",
+    "status_code": 454,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://xn--jobvrkstedet-9cb.nu/",
+    "technologies": []
+  },
+  {
+    "domain_name": "jonesbuickgmc.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://royalynet.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "pcb-cpb.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.pcb-cpb.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "brucebournesold.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.brucebournesold.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "chiantifiorentino.it",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.chiantifiorentino.it/web/",
+    "technologies": []
+  },
+  {
+    "domain_name": "miratrade.com.tr",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://miratrade.com.tr/",
+    "technologies": []
+  },
+  {
+    "domain_name": "11thhourracing.org",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://11thhourracing.org/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "hoffmaninstitute.co.uk",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://hoffmaninstitute.co.uk/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.1",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "largsbaychiropractic.com.au",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.largsbaychiropractic.com.au/",
+    "technologies": [
+      {
+        "technology": "Squarespace",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "headers",
+            "contains": "server: Squarespace",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "261welfarefund.com",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://261welfarefund.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "sgsextremaratio.it",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://sgsextremaratio.it/",
+    "technologies": []
+  },
+  {
+    "domain_name": "everhartsoutdoor.com",
+    "status_code": null,
+    "status": "SSL Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "northshoremacnut.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.northshoremacnut.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "redpants.jp",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.redpants.jp/",
+    "technologies": [
+      {
+        "technology": "Squarespace",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "headers",
+            "contains": "server: Squarespace",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "massageforworldpeace.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.massageforworldpeace.com",
+    "technologies": []
+  },
+  {
+    "domain_name": "3-energie-klaas.de",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://3-energie-klaas.de/",
+    "technologies": []
+  },
+  {
+    "domain_name": "1ststopsupply.com",
+    "status_code": 409,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "http://1ststopsupply.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "amaronbattery.in",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://amaronbattery.in/",
+    "technologies": []
+  },
+  {
+    "domain_name": "freo.com.au",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://freo.com.au/",
+    "technologies": []
+  },
+  {
+    "domain_name": "bata.edu.hu",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://bata.edu.hu/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "wrinkle-pei.cz",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://wrinkle-pei.cz/",
+    "technologies": []
+  },
+  {
+    "domain_name": "koniczynka.info.pl",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.koniczynka.info.pl/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "labdemo.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://labdemo.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "buchhaltungsservice-koenig.de",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://buchhaltungsservice-koenig.de/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "davidloeppke.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://davidloeppke.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "aardvarkelectriccorp.com",
+    "status_code": 409,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "http://aardvarkelectriccorp.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "imgs.co.jp",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.imgs.co.jp/index.html",
+    "technologies": []
+  },
+  {
+    "domain_name": "herbalwise.ie",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://herbalwise.ie/",
+    "technologies": []
+  },
+  {
+    "domain_name": "celiabedilia.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://celiabedilia.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "thomasrosenbaum.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.thomasrosenbaum.com/",
+    "technologies": [
+      {
+        "technology": "Squarespace",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "headers",
+            "contains": "server: Squarespace",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "100wwcstlw.org",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://100wwcstlw.org/",
+    "technologies": []
+  },
+  {
+    "domain_name": "joseph-herber.business.site",
+    "status_code": 404,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://joseph-herber.business.site/",
+    "technologies": []
+  },
+  {
+    "domain_name": "abbikadabbisbakingco.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.abbikadabbisbakingco.com",
+    "technologies": []
+  },
+  {
+    "domain_name": "1stclairavewest.com",
+    "status_code": 409,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "http://1stclairavewest.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "sindacatobadanti.it",
+    "status_code": 503,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://www.sindacatobadanti.it/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "arol.cl",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://arol.cl/",
+    "technologies": []
+  },
+  {
+    "domain_name": "5rcircleprocess.weebly.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://5rcircleprocess.weebly.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "hansis-knusperhendl-foodtruck.eatbu.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://hansis-knusperhendl-foodtruck.eatbu.com/?lang=en",
+    "technologies": []
+  },
+  {
+    "domain_name": "shapirolawfirm.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://shapirolawfirm.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.3.10",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "deepseass.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.deepseass.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "nwmotorinn.com",
+    "status_code": null,
+    "status": "Connection Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "construccionesyatecnicas.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "http://construccionesyatecnicas.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "fluxar.com.ar",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.fluxar.com.ar/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 6.8.6",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "bfnelson.it",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://bfnelson.it/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "rivithead.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.rivithead.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "unitedveterinaryservice.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://unitedveterinaryservice.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "joburgheritage.org.za",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://joburgheritage.org.za/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "verticalcommunitychurch.com",
+    "status_code": null,
+    "status": "Connection Error",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  },
+  {
+    "domain_name": "weissbauchpapageien.de",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://p2-1.afp24.net/true1.php?id=weis44j4dh3o49xk",
+    "technologies": []
+  },
+  {
+    "domain_name": "gitesducharmois.fr",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.gitesducharmois.fr/",
+    "technologies": []
+  },
+  {
+    "domain_name": "appelpsychotherapy.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.appelpsychotherapy.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "broganlmt.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.broganlmt.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "needaphysio.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.needaphysio.com/",
+    "technologies": []
+  },
+  {
+    "domain_name": "lighthouseprc.org",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://lighthouseprc.org/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          },
+          {
+            "source": "headers",
+            "contains": "x-nginx-cache: WordPress",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "2agateway.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://2agateway.com/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          },
+          {
+            "source": "html_body",
+            "contains": "WordPress 7.0.4",
+            "confidence": 0.9
+          }
+        ],
+        "final_confidence": 0.9
+      }
+    ]
+  },
+  {
+    "domain_name": "1stlocksheathscouts.org.uk",
+    "status_code": 403,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://1stlocksheathscouts.org.uk/",
+    "technologies": []
+  },
+  {
+    "domain_name": "ledestjernenstu.dk",
+    "status_code": 454,
+    "status": "Failed",
+    "hasResponse": true,
+    "final_url": "https://ledestjernenstu.dk/",
+    "technologies": []
+  },
+  {
+    "domain_name": "footasylum.com",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://www.footasylum.com:443/",
+    "technologies": []
+  },
+  {
+    "domain_name": "tamcconstruction.net",
+    "status_code": 200,
+    "status": "Success",
+    "hasResponse": true,
+    "final_url": "https://tamcconstruction.net/",
+    "technologies": [
+      {
+        "technology": "WordPress",
+        "category": "cms",
+        "evidence": [
+          {
+            "source": "html_body",
+            "contains": "-js-extra",
+            "confidence": 0.85
+          }
+        ],
+        "final_confidence": 0.85
+      }
+    ]
+  },
+  {
+    "domain_name": "startravelcompany.com",
+    "status_code": null,
+    "status": "Connection Timeout",
+    "hasResponse": false,
+    "final_url": null,
+    "technologies": []
+  }
+]

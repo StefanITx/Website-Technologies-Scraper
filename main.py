@@ -1,28 +1,40 @@
+import json
+
 import pandas as pd
 from fetch_modules.fetch_httpRequests import http_fetch
 from detector import signature_matches
+from dataclasses import dataclass
+from concurrent.futures import ThreadPoolExecutor
 
+final_result=[]
 
 df=pd.read_parquet("domains.snappy.parquet", columns=["root_domain"])
 list_of_domains=df["root_domain"].astype(str).tolist()
 
-for domain in list_of_domains:
+def append_to_final(domain):
     domain_result=http_fetch(domain)
-    print(f"Domain: {domain_result.domain_name}")
-    print(f"Status Code: {domain_result.status_code}")
-    print(f"Status: {domain_result.status}")
-    print(f"Final URL: {domain_result.final_url}")
-    print(f"Has Response: {domain_result.hasResponse}")
+    result={}
+    result["domain_name"]=domain_result.domain_name
+    result["status_code"]=domain_result.status_code
+    result["status"]=domain_result.status
+    result["hasResponse"]=domain_result.hasResponse
+    result["final_url"]=domain_result.final_url
     if domain_result.hasResponse is False:
-        print("Request failed.\n")
-        continue
-    matches=signature_matches(domain_result.response_text, domain_result.headers)
-    if not matches:
-        print("No matches found.")
-    for match in matches:
-        print(f"Match found: {match}")
-    print("\n")
+        result["technologies"]=[]
+    else:
+        matches=signature_matches(domain_result.response_text, domain_result.headers)
+        result["technologies"]=matches
+    #print(result)
+    final_result.append(result)
 
+#for domain in list_of_domains:
+#    append_to_final(domain)
+
+with ThreadPoolExecutor(max_workers=10) as executor:
+    executor.map(append_to_final, list_of_domains)  
+
+with open('results.json', 'w', encoding='utf-8') as file:
+    json.dump(final_result, file,indent=2)
 
 '''
 domain_1=http_fetch(list_of_domains[1])
