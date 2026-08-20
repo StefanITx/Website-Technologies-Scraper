@@ -1,92 +1,2576 @@
 [
-  {"technology": "WordPress", "category": "cms", "source": "headers", "field": "X-Pingback", "match_type": "contains", "pattern": "xmlrpc.php", "confidence": 0.85},
-  {"technology": "WordPress", "category": "cms", "source": "headers", "field": "link", "match_type": "contains", "pattern": "api.w.org", "confidence": 0.85},
-  {"technology": "WordPress", "category": "cms", "source": "html_body", "match_type": "regex", "pattern": "/wp-(content|includes)/", "confidence": 0.80},
-  {"technology": "WordPress", "category": "cms", "source": "html_body", "match_type": "regex", "pattern": "content=\"WordPress ([0-9.]+)\"", "confidence": 0.90},
-
-  {"technology": "Squarespace", "category": "cms", "source": "headers", "field": "server", "match_type": "contains", "pattern": "Squarespace", "confidence": 0.90},
-
-  {"technology": "Cloudflare", "category": "cdn", "source": "headers", "field": "cf-ray", "match_type": "exists", "confidence": 0.90},
-  {"technology": "Cloudflare", "category": "cdn", "source": "headers", "field": "server", "match_type": "contains", "pattern": "cloudflare", "confidence": 0.85},
-  {"technology": "Cloudflare", "category": "cdn", "source": "cookies", "field": "__cfduid", "match_type": "exists", "confidence": 0.70},
-
-  {"technology": "Akamai", "category": "cdn", "source": "headers", "field": "X-Akamai-Transformed", "match_type": "exists", "confidence": 0.85},
-  {"technology": "Akamai", "category": "cdn", "source": "headers", "field": "X-EdgeConnect-MidMile-RTT", "match_type": "exists", "confidence": 0.80},
-
-  {"technology": "Fastly", "category": "cdn", "source": "headers", "field": "server", "match_type": "contains", "pattern": "Fastly", "confidence": 0.85},
-  {"technology": "Fastly", "category": "cdn", "source": "headers", "field": "Vary", "match_type": "contains", "pattern": "Fastly-SSL", "confidence": 0.80},
-
-  {"technology": "Shopify", "category": "ecommerce_platform", "source": "cookies", "field": "_shopify_s", "match_type": "exists", "confidence": 0.85},
-  {"technology": "Shopify", "category": "ecommerce_platform", "source": "cookies", "field": "_shopify_essential_", "match_type": "exists", "confidence": 0.80},
-  {"technology": "Shopify", "category": "ecommerce_platform", "source": "headers", "field": "x-shopify-stage", "match_type": "exists", "confidence": 0.80},
-
-  {"technology": "Google Analytics", "category": "analytics", "source": "html_body", "match_type": "contains", "pattern": "google-analytics.com/analytics.js", "confidence": 0.85},
-  {"technology": "Google Analytics", "category": "analytics", "source": "html_body", "match_type": "contains", "pattern": "googletagmanager.com/gtag/js", "confidence": 0.80},
-  {"technology": "Google Analytics", "category": "analytics", "source": "cookies", "field": "_ga", "match_type": "exists", "confidence": 0.75},
-
-  {"technology": "Google Tag Manager", "category": "marketing_tag_manager", "source": "html_body", "match_type": "contains", "pattern": "Google Tag Manager -->", "confidence": 0.90},
-  {"technology": "Google Tag Manager", "category": "marketing_tag_manager", "source": "html_body", "match_type": "contains", "pattern": "googletagmanager.com/gtm.js", "confidence": 0.85},
-
-  {"technology": "jQuery", "category": "javascript_framework", "source": "html_body", "match_type": "regex", "pattern": "<script[^>]*jquery", "confidence": 0.75},
-
-  {"technology": "Google reCAPTCHA", "category": "security_ssl", "source": "html_body", "match_type": "contains", "pattern": "/recaptcha/api.js", "confidence": 0.85},
-
-  {"technology": "HubSpot", "category": "email_marketing", "source": "html_body", "match_type": "contains", "pattern": "Start of Async HubSpot", "confidence": 0.85},
-  {"technology": "HubSpot", "category": "email_marketing", "source": "html_body", "match_type": "contains", "pattern": ".hs-scripts.com/", "confidence": 0.85},
-
-  {"technology": "Drupal", "category": "cms", "source": "headers", "field": "X-Generator", "match_type": "contains", "pattern": "Drupal", "confidence": 0.90},
-  {"technology": "Drupal", "category": "cms", "source": "headers", "field": "X-Drupal-Cache", "match_type": "exists", "confidence": 0.85},
-  {"technology": "Drupal", "category": "cms", "source": "html_body", "match_type": "regex", "pattern": "\"/sites/(default|all)/(themes|modules)/", "confidence": 0.85},
-
-  {"technology": "Joomla", "category": "cms", "source": "headers", "field": "X-Content-Encoded-By", "match_type": "contains", "pattern": "Joomla", "confidence": 0.85},
-  {"technology": "Joomla", "category": "cms", "source": "html_body", "match_type": "contains", "pattern": "content=\"Joomla!", "confidence": 0.90},
-
-  {"technology": "Bootstrap", "category": "css_framework", "source": "html_body", "match_type": "regex", "pattern": "bootstrap(\\.min)?\\.(js|css)", "confidence": 0.75},
-
-  {"technology": "Stripe", "category": "payment_processor", "source": "html_body", "match_type": "contains", "pattern": "js.stripe.com", "confidence": 0.90},
-  {"technology": "Stripe", "category": "payment_processor", "source": "cookies", "field": "__stripe_mid", "match_type": "exists", "confidence": 0.85},
-  {"technology": "Stripe", "category": "payment_processor", "source": "cookies", "field": "__stripe_sid", "match_type": "exists", "confidence": 0.80},
-
-  {"technology": "PayPal", "category": "payment_processor", "source": "html_body", "match_type": "contains", "pattern": "paypalobjects.com", "confidence": 0.85},
-  {"technology": "PayPal", "category": "payment_processor", "source": "headers", "field": "content-security-policy", "match_type": "contains", "pattern": "paypal.com", "confidence": 0.80},
-
-  {"technology": "Facebook Pixel", "category": "marketing_tag_manager", "source": "html_body", "match_type": "regex", "pattern": "connect\\.facebook\\.\\w+/.+/fbevents\\.js", "confidence": 0.85},
-
-  {"technology": "Mailchimp", "category": "email_marketing", "source": "html_body", "match_type": "contains", "pattern": "Begin MailChimp Signup Form -->", "confidence": 0.90},
-  {"technology": "Mailchimp", "category": "email_marketing", "source": "html_body", "match_type": "contains", "pattern": "chimpstatic.com/mcjs-connected", "confidence": 0.85},
-
-  {"technology": "All in One SEO Pack", "category": "plugin", "source": "html_body", "match_type": "regex", "pattern": "All in One SEO Pack ([0-9.]+)", "confidence": 0.90},
-
-  {"technology": "Wix", "category": "cms", "source": "headers", "field": "X-Wix-Renderer-Server", "match_type": "exists", "confidence": 0.85},
-  {"technology": "Wix", "category": "cms", "source": "headers", "field": "X-Wix-Request-Id", "match_type": "exists", "confidence": 0.80},
-  {"technology": "Wix", "category": "cms", "source": "html_body", "match_type": "contains", "pattern": "static.parastorage.com", "confidence": 0.85},
-
-  {"technology": "Elementor", "category": "plugin", "source": "html_body", "match_type": "contains", "pattern": "/wp-content/plugins/elementor/", "confidence": 0.85},
-  {"technology": "Elementor", "category": "plugin", "source": "html_body", "match_type": "regex", "pattern": "content=\"Elementor ([0-9.]+)\"", "confidence": 0.90},
-  {"technology": "Elementor", "category": "plugin", "source": "cookies", "field": "elementor_pro_login", "match_type": "exists", "confidence": 0.75},
-
-  {"technology": "WPForms", "category": "plugin", "source": "html_body", "match_type": "contains", "pattern": "/wp-content/plugins/wpforms", "confidence": 0.85},
-
-  {"technology": "Contact Form 7", "category": "plugin", "source": "html_body", "match_type": "contains", "pattern": "/wp-content/plugins/contact-form-7/", "confidence": 0.85},
-
-  {"technology": "Akismet", "category": "plugin", "source": "html_body", "match_type": "contains", "pattern": "/wp-content/plugins/akismet/", "confidence": 0.85},
-
-  {"technology": "Jetpack", "category": "plugin", "source": "html_body", "match_type": "contains", "pattern": "/wp-content/plugins/jetpack/", "confidence": 0.85},
-
-  {"technology": "WooCommerce", "category": "ecommerce_platform", "source": "html_body", "match_type": "regex", "pattern": "content=\"WooCommerce ([0-9.]+)\"", "confidence": 0.90},
-  {"technology": "WooCommerce", "category": "ecommerce_platform", "source": "cookies", "field": "woocommerce_recently_viewed", "match_type": "exists", "confidence": 0.80},
-
-  {"technology": "Vue.js", "category": "javascript_framework", "source": "html_body", "match_type": "regex", "pattern": "<script[^>]*vue(\\.min)?\\.js", "confidence": 0.70},
-
-  {"technology": "Ghost", "category": "cms", "source": "headers", "field": "X-Ghost-Cache-Status", "match_type": "exists", "confidence": 0.85},
-  {"technology": "Ghost", "category": "cms", "source": "html_body", "match_type": "regex", "pattern": "content=\"Ghost ?([0-9.]+)\"", "confidence": 0.90},
-
-  {"technology": "Google Fonts", "category": "font_service", "source": "html_body", "match_type": "contains", "pattern": "fonts.googleapis.com", "confidence": 0.85},
-
-  {"technology": "hCaptcha", "category": "security_ssl", "source": "html_body", "match_type": "regex", "pattern": "hcaptcha\\.com/([0-9]+?)/api\\.js", "confidence": 0.85},
-  {"technology": "hCaptcha", "category": "security_ssl", "source": "headers", "field": "content-security-policy", "match_type": "contains", "pattern": "hcaptcha.com", "confidence": 0.80},
-
-  {"technology": "Hotjar", "category": "analytics", "source": "html_body", "match_type": "contains", "pattern": "static.hotjar.com", "confidence": 0.85},
-
-  {"technology": "Microsoft Clarity", "category": "analytics", "source": "html_body", "match_type": "regex", "pattern": "clarity\\.ms/.+/([0-9.]+)/clarity\\.js", "confidence": 0.85}
+  {
+    "technology": "WordPress",
+    "category": "cms",
+    "source": "headers",
+    "field": "X-Pingback",
+    "match_type": "contains",
+    "pattern": "xmlrpc.php",
+    "confidence": 0.85
+  },
+  {
+    "technology": "WordPress",
+    "category": "cms",
+    "source": "headers",
+    "field": "link",
+    "match_type": "contains",
+    "pattern": "api.w.org",
+    "confidence": 0.85
+  },
+  {
+    "technology": "WordPress",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "/wp-(content|includes)/",
+    "confidence": 0.8
+  },
+  {
+    "technology": "WordPress",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "content=\"WordPress ([0-9.]+)\"",
+    "confidence": 0.9
+  },
+  {
+    "technology": "WordPress",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "-js-extra",
+    "confidence": 0.85
+  },
+  {
+    "technology": "WordPress",
+    "category": "cms",
+    "source": "headers",
+    "field": "x-nginx-cache",
+    "match_type": "contains",
+    "pattern": "WordPress",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Squarespace",
+    "category": "cms",
+    "source": "headers",
+    "field": "server",
+    "match_type": "contains",
+    "pattern": "Squarespace",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Cloudflare",
+    "category": "cdn",
+    "source": "headers",
+    "field": "cf-ray",
+    "match_type": "exists",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Cloudflare",
+    "category": "cdn",
+    "source": "headers",
+    "field": "server",
+    "match_type": "contains",
+    "pattern": "cloudflare",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Cloudflare",
+    "category": "cdn",
+    "source": "cookies",
+    "field": "__cfduid",
+    "match_type": "exists",
+    "confidence": 0.7
+  },
+  {
+    "technology": "Akamai",
+    "category": "cdn",
+    "source": "headers",
+    "field": "X-Akamai-Transformed",
+    "match_type": "exists",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Akamai",
+    "category": "cdn",
+    "source": "headers",
+    "field": "X-EdgeConnect-MidMile-RTT",
+    "match_type": "exists",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Fastly",
+    "category": "cdn",
+    "source": "headers",
+    "field": "server",
+    "match_type": "contains",
+    "pattern": "Fastly",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Fastly",
+    "category": "cdn",
+    "source": "headers",
+    "field": "Vary",
+    "match_type": "contains",
+    "pattern": "Fastly-SSL",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Shopify",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "field": "_shopify_s",
+    "match_type": "exists",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Shopify",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "field": "_shopify_essential_",
+    "match_type": "exists",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Shopify",
+    "category": "ecommerce_platform",
+    "source": "headers",
+    "field": "x-shopify-stage",
+    "match_type": "exists",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Google Analytics",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "google-analytics.com/analytics.js",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Google Analytics",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "googletagmanager.com/gtag/js",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Google Analytics",
+    "category": "analytics",
+    "source": "cookies",
+    "field": "_ga",
+    "match_type": "exists",
+    "confidence": 0.75
+  },
+  {
+    "technology": "Google Tag Manager",
+    "category": "marketing_tag_manager",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "Google Tag Manager -->",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Google Tag Manager",
+    "category": "marketing_tag_manager",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "googletagmanager.com/gtm.js",
+    "confidence": 0.85
+  },
+  {
+    "technology": "jQuery",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "<script[^>]*jquery",
+    "confidence": 0.75
+  },
+  {
+    "technology": "Google reCAPTCHA",
+    "category": "security_ssl",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "/recaptcha/api.js",
+    "confidence": 0.85
+  },
+  {
+    "technology": "HubSpot",
+    "category": "email_marketing",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "Start of Async HubSpot",
+    "confidence": 0.85
+  },
+  {
+    "technology": "HubSpot",
+    "category": "email_marketing",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": ".hs-scripts.com/",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Drupal",
+    "category": "cms",
+    "source": "headers",
+    "field": "X-Generator",
+    "match_type": "contains",
+    "pattern": "Drupal",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Drupal",
+    "category": "cms",
+    "source": "headers",
+    "field": "X-Drupal-Cache",
+    "match_type": "exists",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Drupal",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "\"/sites/(default|all)/(themes|modules)/",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Drupal",
+    "category": "cms",
+    "source": "cookies",
+    "match_type": "key_regex",
+    "pattern": "^SESS[a-f0-9]{32}$",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Joomla",
+    "category": "cms",
+    "source": "headers",
+    "field": "X-Content-Encoded-By",
+    "match_type": "contains",
+    "pattern": "Joomla",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Joomla",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "content=\"Joomla!",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Bootstrap",
+    "category": "css_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "bootstrap(\\.min)?\\.(js|css)",
+    "confidence": 0.75
+  },
+  {
+    "technology": "Stripe",
+    "category": "payment_processor",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "js.stripe.com",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Stripe",
+    "category": "payment_processor",
+    "source": "cookies",
+    "field": "__stripe_mid",
+    "match_type": "exists",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Stripe",
+    "category": "payment_processor",
+    "source": "cookies",
+    "field": "__stripe_sid",
+    "match_type": "exists",
+    "confidence": 0.8
+  },
+  {
+    "technology": "PayPal",
+    "category": "payment_processor",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "paypalobjects.com",
+    "confidence": 0.85
+  },
+  {
+    "technology": "PayPal",
+    "category": "payment_processor",
+    "source": "headers",
+    "field": "content-security-policy",
+    "match_type": "contains",
+    "pattern": "paypal.com",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Facebook Pixel",
+    "category": "marketing_tag_manager",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "connect\\.facebook\\.\\w+/.+/fbevents\\.js",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Mailchimp",
+    "category": "email_marketing",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "Begin MailChimp Signup Form -->",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Mailchimp",
+    "category": "email_marketing",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "chimpstatic.com/mcjs-connected",
+    "confidence": 0.85
+  },
+  {
+    "technology": "All in One SEO Pack",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "All in One SEO Pack ([0-9.]+)",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Wix",
+    "category": "cms",
+    "source": "headers",
+    "field": "X-Wix-Renderer-Server",
+    "match_type": "exists",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Wix",
+    "category": "cms",
+    "source": "headers",
+    "field": "X-Wix-Request-Id",
+    "match_type": "exists",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Wix",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "static.parastorage.com",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Elementor",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "/wp-content/plugins/elementor/",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Elementor",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "content=\"Elementor ([0-9.]+)\"",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Elementor",
+    "category": "plugin",
+    "source": "cookies",
+    "field": "elementor_pro_login",
+    "match_type": "exists",
+    "confidence": 0.75
+  },
+  {
+    "technology": "WPForms",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "/wp-content/plugins/wpforms",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Contact Form 7",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "/wp-content/plugins/contact-form-7/",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Akismet",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "/wp-content/plugins/akismet/",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Jetpack",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "/wp-content/plugins/jetpack/",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Wordfence",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "/wp-content/plugins/wordfence/",
+    "confidence": 0.85
+  },
+  {
+    "technology": "WooCommerce",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "content=\"WooCommerce ([0-9.]+)\"",
+    "confidence": 0.9
+  },
+  {
+    "technology": "WooCommerce",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "field": "woocommerce_recently_viewed",
+    "match_type": "exists",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Vue.js",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "<script[^>]*vue(\\.min)?\\.js",
+    "confidence": 0.7
+  },
+  {
+    "technology": "Ghost",
+    "category": "cms",
+    "source": "headers",
+    "field": "X-Ghost-Cache-Status",
+    "match_type": "exists",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Ghost",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "content=\"Ghost ?([0-9.]+)\"",
+    "confidence": 0.9
+  },
+  {
+    "technology": "Google Fonts",
+    "category": "font_service",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "fonts.googleapis.com",
+    "confidence": 0.85
+  },
+  {
+    "technology": "hCaptcha",
+    "category": "security_ssl",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "hcaptcha\\.com/([0-9]+?)/api\\.js",
+    "confidence": 0.85
+  },
+  {
+    "technology": "hCaptcha",
+    "category": "security_ssl",
+    "source": "headers",
+    "field": "content-security-policy",
+    "match_type": "contains",
+    "pattern": "hcaptcha.com",
+    "confidence": 0.8
+  },
+  {
+    "technology": "Hotjar",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "static.hotjar.com",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Microsoft Clarity",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "pattern": "clarity\\.ms/.+/([0-9.]+)/clarity\\.js",
+    "confidence": 0.85
+  },
+  {
+    "technology": "Apache",
+    "category": "web_server",
+    "source": "html_body",
+    "match_type": "contains",
+    "pattern": "Apache is functioning normally",
+    "confidence": 0.2
+  },
+  {
+    "technology": "Adobe Experience Manager",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.8,
+    "pattern": "/etc/designs/"
+  },
+  {
+    "technology": "Adobe Experience Manager Edge Delivery Services",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "^.+/scripts/aem\\.js$"
+  },
+  {
+    "technology": "Adobe Experience Manager Franklin",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "^.+/scripts/lib-franklin\\.js$"
+  },
+  {
+    "technology": "Afterpay",
+    "category": "payment_processor",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "portal\\.afterpay\\.com"
+  },
+  {
+    "technology": "Akka HTTP",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "akka-http(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "All in One SEO",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^all in one seo \\(aioseo\\) ([\\d\\.]+)"
+  },
+  {
+    "technology": "Ametys",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"(?:Ametys|Anyware Technologies)\""
+  },
+  {
+    "technology": "AMP for WordPress",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^AMP Plugin v(\\d+\\.\\d+.*)$"
+  },
+  {
+    "technology": "AngularJS",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "angular[.-]([\\d.]*\\d)[^/]*\\.js"
+  },
+  {
+    "technology": "AOLserver",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "AOLserver/?([\\d.]+)?"
+  },
+  {
+    "technology": "Apache APISIX",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "X-APISIX-Upstream-Status"
+  },
+  {
+    "technology": "Apache HTTP Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "(?:Apache(?:$|/([\\d.]+)|[^/-])|(?:^|\\b)HTTPD)"
+  },
+  {
+    "technology": "Apache Tomcat",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^Apache-Coyote"
+  },
+  {
+    "technology": "Apache Traffic Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "ATS/?([\\d.]+)?"
+  },
+  {
+    "technology": "Arastta",
+    "category": "ecommerce_platform",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "Arastta"
+  },
+  {
+    "technology": "Arc",
+    "category": "cdn",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "arc\\.io/widget\\.js"
+  },
+  {
+    "technology": "Artifactory Web Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Artifactory(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "Auth0",
+    "category": "security_ssl",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "x-auth0-requestid"
+  },
+  {
+    "technology": "AWStats",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"AWStats ([\\d.]+(?: \\(build [\\d.]+\\))?)\""
+  },
+  {
+    "technology": "Axios",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/axios(@|/)([\\d.]+)(?:/[a-z]+)?/axios(?:.min)?\\.js"
+  },
+  {
+    "technology": "Backbone.js",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "backbone.*\\.js"
+  },
+  {
+    "technology": "Backdrop",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Backdrop CMS(?:\\s([\\d.]+))?"
+  },
+  {
+    "technology": "BIGACE",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"BIGACE ([\\d.]+)\""
+  },
+  {
+    "technology": "Bigware",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "bigWAdminID"
+  },
+  {
+    "technology": "Bitrix24",
+    "category": "customer_support",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "cdn\\.bitrix24\\.com"
+  },
+  {
+    "technology": "Blinger",
+    "category": "customer_support",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "app\\.blinger\\.io/"
+  },
+  {
+    "technology": "Bolt CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Bolt\""
+  },
+  {
+    "technology": "BuddyPress",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/wp-content/plugins/buddypress/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?"
+  },
+  {
+    "technology": "Caddy",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Caddy"
+  },
+  {
+    "technology": "CakePHP",
+    "category": "web_framework",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "cakephp"
+  },
+  {
+    "technology": "Cherokee",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^Cherokee(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "CherryPy",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "CherryPy(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "CMS Made Simple",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"CMS Made Simple\""
+  },
+  {
+    "technology": "CMSimple",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"CMSimple( [\\d.]+)?\""
+  },
+  {
+    "technology": "Coaster CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Coaster CMS v([\\d.]+)$"
+  },
+  {
+    "technology": "CodeIgniter",
+    "category": "web_framework",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.75,
+    "field": "ci_csrf_token"
+  },
+  {
+    "technology": "Commerce Server",
+    "category": "ecommerce_platform",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "COMMERCE-SERVER-SOFTWARE"
+  },
+  {
+    "technology": "Concrete CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^concrete5(?: - ([\\d.]+)$)?"
+  },
+  {
+    "technology": "Contao",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^Contao Open Source CMS$"
+  },
+  {
+    "technology": "Contenido",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"Contenido ([\\d.]+)\""
+  },
+  {
+    "technology": "Cosmoshop",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "cosmoshop_functions\\.js"
+  },
+  {
+    "technology": "Cotonti",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Cotonti\""
+  },
+  {
+    "technology": "CouchDB",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "CouchDB/([\\d.]+)"
+  },
+  {
+    "technology": "CppCMS",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "^CppCMS/([\\d.]+)$"
+  },
+  {
+    "technology": "Craft CMS",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "\\bCraft CMS\\b"
+  },
+  {
+    "technology": "CubeCart",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"cubecart\""
+  },
+  {
+    "technology": "Dancer",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Perl Dancer ([\\d.]+)"
+  },
+  {
+    "technology": "DataLife Engine",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"DataLife Engine\""
+  },
+  {
+    "technology": "DataTables",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "dataTables.*\\.js"
+  },
+  {
+    "technology": "DedeCMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.8,
+    "pattern": "dedeajax"
+  },
+  {
+    "technology": "DeskPro",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^DeskPRO.+$"
+  },
+  {
+    "technology": "Directus",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "x-powered-by",
+    "pattern": "^Directus$"
+  },
+  {
+    "technology": "Django",
+    "category": "web_framework",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "django_language"
+  },
+  {
+    "technology": "DNN",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"DotNetNuke\""
+  },
+  {
+    "technology": "Dojo",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "((?:\\d+\\.)+\\d+)/dojo/dojo(?:\\.xd)?\\.js"
+  },
+  {
+    "technology": "Drupal Commerce",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/modules/(?:contrib/)?commerce/js/conditions\\.js"
+  },
+  {
+    "technology": "e107",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "e107"
+  },
+  {
+    "technology": "EC-CUBE",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "eccube\\.js"
+  },
+  {
+    "technology": "Ektron CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/ektron\\.javascript\\.ashx"
+  },
+  {
+    "technology": "ElasticPress",
+    "category": "plugin",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "x-elasticpress-query"
+  },
+  {
+    "technology": "Eleanor CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Eleanor\""
+  },
+  {
+    "technology": "Elgg",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "elgg(?:_dataTables)?(?:\\/Ajax)?(?:\\/Plugin)?(?:\\/require_config)?(?:\\/spinner)?(?:\\/dev)?(?:\\.\\w{0,10})?\\.js"
+  },
+  {
+    "technology": "EmbedThis Appweb",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Mbedthis-Appweb(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "EspoCRM",
+    "category": "customer_support",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "espo(?:\\.min)?\\.js"
+  },
+  {
+    "technology": "experiencedCMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^experiencedCMS$"
+  },
+  {
+    "technology": "Express",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "^Express(?:$|,)"
+  },
+  {
+    "technology": "ExpressionEngine",
+    "category": "cms",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "exp_csrf_token"
+  },
+  {
+    "technology": "ExtJS",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "ext-base\\.js"
+  },
+  {
+    "technology": "eZ Publish",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"eZ Publish\""
+  },
+  {
+    "technology": "Fat-Free Framework",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "^Fat-Free Framework$"
+  },
+  {
+    "technology": "Flask",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Werkzeug/?([\\d\\.]+)?"
+  },
+  {
+    "technology": "FlipBuilder",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "\\.flipbuilder\\.com/"
+  },
+  {
+    "technology": "Flurry Analytics",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "cdn\\.flurry\\.com/"
+  },
+  {
+    "technology": "Fork CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^Fork CMS$"
+  },
+  {
+    "technology": "Formstone",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "jquery\\.formstone\\.min\\.js"
+  },
+  {
+    "technology": "Frappe",
+    "category": "web_framework",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^frappe$"
+  },
+  {
+    "technology": "Gatsby",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Gatsby(?: ([0-9.]+))?$"
+  },
+  {
+    "technology": "GetSimple CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"GetSimple\""
+  },
+  {
+    "technology": "GlassFish",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "GlassFish(?: Server)?(?: Open Source Edition)?(?: ?/?([\\d.]+))?"
+  },
+  {
+    "technology": "GLPI",
+    "category": "web_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "//.*glpi.+common\\.min\\.js\\?v=(\\d+\\.\\d+\\.\\d+)"
+  },
+  {
+    "technology": "GoAhead",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "GoAhead"
+  },
+  {
+    "technology": "Google Web Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "gws"
+  },
+  {
+    "technology": "Grafana",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "grafana\\..+\\.com/public/build/"
+  },
+  {
+    "technology": "Grav",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"GravCMS(?:\\s([\\d.]+))?\""
+  },
+  {
+    "technology": "Grin",
+    "category": "marketing_tag_manager",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "grin-sdk\\.js"
+  },
+  {
+    "technology": "gunicorn",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "gunicorn(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "Handlebars",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "handlebars(?:\\.runtime)?(?:-v([\\d.]+?))?(?:\\.min)?\\.js"
+  },
+  {
+    "technology": "HCL Digital Experience",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "IBM-Web2-Location"
+  },
+  {
+    "technology": "HCL Domino",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^Lotus-Domino$"
+  },
+  {
+    "technology": "HHVM",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "HHVM/?([\\d.]+)?"
+  },
+  {
+    "technology": "Hostinger",
+    "category": "hosting_provider",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "platform",
+    "pattern": "hostinger"
+  },
+  {
+    "technology": "HP iLO",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "HP-iLO-Server(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "IBM HTTP Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "IBM_HTTP_Server(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "IIS",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^(?:Microsoft-)?IIS(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "ImpressCMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"ImpressCMS\""
+  },
+  {
+    "technology": "ImpressPages",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"ImpressPages(?: CMS)?( [\\d.]*)?\""
+  },
+  {
+    "technology": "Indexhibit",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Indexhibit\""
+  },
+  {
+    "technology": "InstantCMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"InstantCMS\""
+  },
+  {
+    "technology": "Intel Active Management Technology",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Intel\\(R\\) Active Management Technology(?: ([\\d.]+))?"
+  },
+  {
+    "technology": "JBoss Application Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "JBoss(?:-([\\d.]+))?"
+  },
+  {
+    "technology": "JBoss Web",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "JBossWeb(?:-([\\d.]+))?"
+  },
+  {
+    "technology": "Jetty",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Jetty(?:\\(([\\d\\.]*\\d+))?"
+  },
+  {
+    "technology": "Jitsi",
+    "category": "customer_support",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "lib-jitsi-meet.*\\.js"
+  },
+  {
+    "technology": "JivoChat",
+    "category": "customer_support",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "\\.jivosite\\.com"
+  },
+  {
+    "technology": "jQuery UI",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "jquery-ui[.-]([\\d.]*\\d)[^/]*\\.js"
+  },
+  {
+    "technology": "JSZip",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/jszip\\.min\\.js"
+  },
+  {
+    "technology": "Kentico CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"Kentico CMS ([\\d.R]+ \\(build [\\d.]+\\))\""
+  },
+  {
+    "technology": "Kirby",
+    "category": "cms",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "kirby_session"
+  },
+  {
+    "technology": "Koa",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "^koa$"
+  },
+  {
+    "technology": "Koala Framework",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^Koala Web Framework CMS"
+  },
+  {
+    "technology": "Kohana",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "Kohana Framework ([\\d.]+)"
+  },
+  {
+    "technology": "Kooboo CMS",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "X-KoobooCMS-Version"
+  },
+  {
+    "technology": "Ktor",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "server",
+    "pattern": "^Ktor/debug$"
+  },
+  {
+    "technology": "Laravel",
+    "category": "web_framework",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "laravel_session"
+  },
+  {
+    "technology": "LEPTON",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"LEPTON\""
+  },
+  {
+    "technology": "Liferay",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Liferay-Portal",
+    "pattern": "[a-z\\s]+([\\d.]+)"
+  },
+  {
+    "technology": "Lift",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "X-Lift-Version"
+  },
+  {
+    "technology": "Lightbox",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+  },
+  {
+    "technology": "lighttpd",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "(?:L|l)ight(?:y)?(?:tpd)?(?:/([\\d\\.]+))?"
+  },
+  {
+    "technology": "LiteSpeed",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^LiteSpeed$"
+  },
+  {
+    "technology": "Lodash",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "lodash.*\\.js"
+  },
+  {
+    "technology": "Magento",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "X-Magento-Vary"
+  },
+  {
+    "technology": "Magnolia CMS",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "x-magnolia-registration"
+  },
+  {
+    "technology": "MailChimp",
+    "category": "marketing_tag_manager",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "s3\\.amazonaws\\.com/downloads\\.mailchimp\\.com/js/mc-validate\\.js"
+  },
+  {
+    "technology": "Mailman",
+    "category": "email_marketing",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/mailman\\d+/static/.+\\.js"
+  },
+  {
+    "technology": "Marked",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/marked(?:\\.min)?\\.js"
+  },
+  {
+    "technology": "Matomo Analytics",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"(?:Matomo|Piwik) - Open Source Web Analytics\""
+  },
+  {
+    "technology": "Mautic",
+    "category": "marketing_tag_manager",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "[^a-z]mtc.*\\.js"
+  },
+  {
+    "technology": "Melis Platform",
+    "category": "marketing_tag_manager",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Melis Platform\\."
+  },
+  {
+    "technology": "Microsoft ASP.NET",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "X-AspNet-Version"
+  },
+  {
+    "technology": "Microsoft SharePoint",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Microsoft SharePoint\""
+  },
+  {
+    "technology": "Microweber",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "[Mm]icroweber(?:\\/includes)?(?:\\/api)?(?:\\/libs)?[\\w\\.\\/-]{0,45}(?:\\.min)?\\.js"
+  },
+  {
+    "technology": "mini_httpd",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "mini_httpd(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "MochiWeb",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "MochiWeb(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "Modified eCommerce",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"by modified eCommerce Shopsoftware\""
+  },
+  {
+    "technology": "MODX",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"MODX[^\\d.]*([\\d.]+)?\""
+  },
+  {
+    "technology": "Mojolicious",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "server",
+    "pattern": "^mojolicious"
+  },
+  {
+    "technology": "Mollom",
+    "category": "security_ssl",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "mollom(?:\\.min)?\\.js"
+  },
+  {
+    "technology": "Moment.js",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "moment(?:\\.min)?\\.js"
+  },
+  {
+    "technology": "Mongrel",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Mongrel"
+  },
+  {
+    "technology": "Mono",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "Mono"
+  },
+  {
+    "technology": "MonsterInsights",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/wp-content/plugins/google-analytics-for-wordpress/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?"
+  },
+  {
+    "technology": "MooTools",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "mootools.*\\.js"
+  },
+  {
+    "technology": "MotoCMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/mt-includes/js/website(?:assets)?\\.(?:min)?\\.js"
+  },
+  {
+    "technology": "Movable Type",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Movable Type\""
+  },
+  {
+    "technology": "Mura CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"Mura\\sCMS\\s([\\d\\.]+)\""
+  },
+  {
+    "technology": "Next.js",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "x-powered-by",
+    "pattern": "^Next\\.js ?([0-9.]+)?"
+  },
+  {
+    "technology": "NextGEN Gallery",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.8,
+    "pattern": "/nextgen-gallery/js/"
+  },
+  {
+    "technology": "NexusPHP",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^NexusPHP$"
+  },
+  {
+    "technology": "Nginx",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "nginx(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "nopCommerce",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^nopCommerce$"
+  },
+  {
+    "technology": "Nuxt.js",
+    "category": "web_framework",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.8,
+    "pattern": "/_nuxt/"
+  },
+  {
+    "technology": "Odoo",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Odoo\""
+  },
+  {
+    "technology": "Okta",
+    "category": "security_ssl",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "oktacdn\\.com/.+/([\\d.]+)/"
+  },
+  {
+    "technology": "Open Web Analytics",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.75,
+    "pattern": "<!-- (?:Start|End) Open Web Analytics Tracker -->"
+  },
+  {
+    "technology": "OpenBSD httpd",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^OpenBSD httpd"
+  },
+  {
+    "technology": "OpenCart",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "OCSESSID"
+  },
+  {
+    "technology": "OpenCms",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "OpenCms"
+  },
+  {
+    "technology": "OpenResty",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "openresty(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "Optimizely Content Management",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"EPiServer\""
+  },
+  {
+    "technology": "Oracle Application Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Oracle[- ]Application[- ]Server(?: Containers for J2EE)?(?:[- ](\\d[\\da-z./]+))?"
+  },
+  {
+    "technology": "Oracle Commerce",
+    "category": "ecommerce_platform",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-ATG-Version",
+    "pattern": "(?:ATGPlatform/([\\d.]+))?"
+  },
+  {
+    "technology": "Oracle HTTP Server",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Oracle-HTTP-Server(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "Oracle Web Cache",
+    "category": "caching",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Oracle(?:AS)?[- ]Web[- ]Cache(?:[- /]([\\da-z./]+))?"
+  },
+  {
+    "technology": "Orchard Core",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Orchard\""
+  },
+  {
+    "technology": "OroCommerce",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "orosfid"
+  },
+  {
+    "technology": "osCommerce",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "osCsid"
+  },
+  {
+    "technology": "Pagekit",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Pagekit\""
+  },
+  {
+    "technology": "Perfmatters",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/wp-content/(?:plugins|cache|uploads)/perfmatters/"
+  },
+  {
+    "technology": "PHP-Nuke",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"PHP-Nuke\""
+  },
+  {
+    "technology": "PHPFusion",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "X-PHPFusion"
+  },
+  {
+    "technology": "phpSQLiteCMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^phpSQLiteCMS(?: (.+))?$"
+  },
+  {
+    "technology": "phpwind",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^phpwind(?: v([0-9-]+))?"
+  },
+  {
+    "technology": "Phusion Passenger",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Phusion Passenger ([\\d.]+)"
+  },
+  {
+    "technology": "Pimcore",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "^pimcore$"
+  },
+  {
+    "technology": "PixelYourSite",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.8,
+    "pattern": "/wp-content/plugins/pixelyoursite/"
+  },
+  {
+    "technology": "Play",
+    "category": "web_framework",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "PLAY_SESSION"
+  },
+  {
+    "technology": "Pligg",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Pligg\""
+  },
+  {
+    "technology": "Plone",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Plone\""
+  },
+  {
+    "technology": "Plupload",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "plupload(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?"
+  },
+  {
+    "technology": "PostHog",
+    "category": "analytics",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "app\\.posthog\\.com/"
+  },
+  {
+    "technology": "PrestaShop",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"PrestaShop\""
+  },
+  {
+    "technology": "ProcessWire",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "ProcessWire CMS"
+  },
+  {
+    "technology": "ProfilePress",
+    "category": "plugin",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "ppwp_wp_session"
+  },
+  {
+    "technology": "Progress Sitefinity",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Sitefinity\\s([\\S]{3,9})"
+  },
+  {
+    "technology": "Prototype",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "(?:prototype|protoaculous)(?:-([\\d.]*[\\d]))?.*\\.js"
+  },
+  {
+    "technology": "PyroCMS",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Streams-Distribution",
+    "pattern": "PyroCMS"
+  },
+  {
+    "technology": "Quick.CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"Quick\\.CMS(?: v([\\d.]+))?\""
+  },
+  {
+    "technology": "React",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "react(?:-with-addons)?[.-](\\d+(?:\\.\\d+)+)[^/]*\\.js"
+  },
+  {
+    "technology": "Resin",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^Resin(?:/(\\S*))?"
+  },
+  {
+    "technology": "Riot.js",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "riot(?:\\+compiler)?(?:\\.min)?\\.js"
+  },
+  {
+    "technology": "RiteCMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^RiteCMS(?: (.+))?"
+  },
+  {
+    "technology": "Ruby on Rails",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "mod_(?:rails|rack)"
+  },
+  {
+    "technology": "Salesforce",
+    "category": "customer_support",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "com.salesforce"
+  },
+  {
+    "technology": "SAP",
+    "category": "customer_support",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "SAP NetWeaver Application Server"
+  },
+  {
+    "technology": "SAP Commerce Cloud",
+    "category": "ecommerce_platform",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "X-Sap-Pad"
+  },
+  {
+    "technology": "script.aculo.us",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "/(?:scriptaculous|protoaculous)(?:\\.js|/)"
+  },
+  {
+    "technology": "Select2",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "select2(?:\\.min|\\.full)?\\.js"
+  },
+  {
+    "technology": "Sharetribe",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "\\.sharetribe\\.com/"
+  },
+  {
+    "technology": "Shiny",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "x-powered-by",
+    "pattern": "^Shiny Server$"
+  },
+  {
+    "technology": "Shopware",
+    "category": "ecommerce_platform",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "sw-context-token",
+    "pattern": "^[\\w]{32}$"
+  },
+  {
+    "technology": "Silverstripe",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^SilverStripe"
+  },
+  {
+    "technology": "SimpleSAMLphp",
+    "category": "security_ssl",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "SimpleSAML"
+  },
+  {
+    "technology": "Sitecore",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Content-Security-Policy",
+    "pattern": "\\.sitecore\\.com"
+  },
+  {
+    "technology": "Sitepark IES",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Sitepark\\sInformation\\sEnterprise\\sServer\\s-\\sIES\\sGenerator\\sv([\\d\\.]+)$"
+  },
+  {
+    "technology": "Smartstore",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Smart[sS]tore(.NET)? (.+)$"
+  },
+  {
+    "technology": "Socket.io",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "socket\\.io.*\\.js"
+  },
+  {
+    "technology": "SPIP",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"(?:^|\\s)SPIP(?:\\s([\\d.]+(?:\\s\\[\\d+\\])?))?\""
+  },
+  {
+    "technology": "Spree",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.75,
+    "pattern": "(?:<link[^>]*/assets/store/all-[a-z\\d]{32}\\.css[^>]+>|<script>\\s*Spree\\.(?:routes|translations|api_key))"
+  },
+  {
+    "technology": "Spring",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "exists",
+    "confidence": 0.85,
+    "field": "X-Application-Context"
+  },
+  {
+    "technology": "Squiz Matrix",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Squiz Matrix\""
+  },
+  {
+    "technology": "Statamic",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "x-powered-by",
+    "pattern": "^Statamic$"
+  },
+  {
+    "technology": "Strapi",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "^Strapi"
+  },
+  {
+    "technology": "Strikingly",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "\\.strikinglycdn\\.com/"
+  },
+  {
+    "technology": "Sulu",
+    "category": "cms",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Generator",
+    "pattern": "Sulu/?(.+)?$"
+  },
+  {
+    "technology": "SvelteKit",
+    "category": "css_framework",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"SvelteKit\""
+  },
+  {
+    "technology": "Sylius",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "syliusshop/script\\.js"
+  },
+  {
+    "technology": "Symfony",
+    "category": "web_framework",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "sf_redirect"
+  },
+  {
+    "technology": "Textpattern CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"Textpattern\""
+  },
+  {
+    "technology": "ThinkPHP",
+    "category": "web_framework",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "ThinkPHP"
+  },
+  {
+    "technology": "thttpd",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "\\bthttpd(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "TomatoCart",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"TomatoCart\""
+  },
+  {
+    "technology": "TYPO3 CMS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "content=\"TYPO3\\s+(?:CMS\\s+)?(?:[\\d.]+)?(?:\\s+CMS)?\""
+  },
+  {
+    "technology": "Umbraco",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"umbraco\""
+  },
+  {
+    "technology": "Uvicorn",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "uvicorn"
+  },
+  {
+    "technology": "Vaadin",
+    "category": "web_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "vaadinBootstrap\\.js(?:\\?v=([\\d.]+))?"
+  },
+  {
+    "technology": "Varnish",
+    "category": "caching",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Via",
+    "pattern": "varnish(?: \\(Varnish/([\\d.]+)\\))?"
+  },
+  {
+    "technology": "VirtueMart",
+    "category": "ecommerce_platform",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.75,
+    "pattern": "<div id=\"vmMainPage"
+  },
+  {
+    "technology": "Web2py",
+    "category": "web_framework",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^Web2py"
+  },
+  {
+    "technology": "webEdition",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"webEdition\""
+  },
+  {
+    "technology": "Weblication",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "^Weblication\u00ae CMS$"
+  },
+  {
+    "technology": "WEBrick",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^WEBrick/([\\d\\.]+)"
+  },
+  {
+    "technology": "WebsiteBaker",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"WebsiteBaker\""
+  },
+  {
+    "technology": "WebSphere",
+    "category": "web_server",
+    "source": "cookies",
+    "match_type": "key_regex",
+    "confidence": 0.75,
+    "pattern": "(?i)ltpatoken"
+  },
+  {
+    "technology": "Welcart",
+    "category": "ecommerce_platform",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "usces_cookie"
+  },
+  {
+    "technology": "Wink",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "(?:_base/js/base|wink).*\\.js"
+  },
+  {
+    "technology": "WPML",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^WPML\\sver\\:([\\d\\.]+)"
+  },
+  {
+    "technology": "Xajax",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "xajax_core.*\\.js"
+  },
+  {
+    "technology": "Xitami",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Xitami(?:/([\\d.]+))?"
+  },
+  {
+    "technology": "XOOPS",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"XOOPS\""
+  },
+  {
+    "technology": "XpressEngine",
+    "category": "cms",
+    "source": "html_body",
+    "match_type": "contains",
+    "confidence": 0.9,
+    "pattern": "content=\"XpressEngine\""
+  },
+  {
+    "technology": "Yaws",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "Yaws(?: ([\\d.]+))?"
+  },
+  {
+    "technology": "Yii",
+    "category": "web_framework",
+    "source": "cookies",
+    "match_type": "exists",
+    "confidence": 0.8,
+    "field": "YII_CSRF_TOKEN"
+  },
+  {
+    "technology": "YUI",
+    "category": "javascript_framework",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.8,
+    "pattern": "(?:/yui/|yui\\.yahooapis\\.com)"
+  },
+  {
+    "technology": "Zend",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "regex",
+    "confidence": 0.85,
+    "field": "X-Powered-By",
+    "pattern": "Zend(?:Server)?(?:[\\s/]?([0-9.]+))?"
+  },
+  {
+    "technology": "Zeta Producer",
+    "category": "plugin",
+    "source": "html_body",
+    "match_type": "regex",
+    "confidence": 0.9,
+    "pattern": "^Zeta Producer ([\\d\\.]+)"
+  },
+  {
+    "technology": "Zope",
+    "category": "web_server",
+    "source": "headers",
+    "match_type": "contains",
+    "confidence": 0.85,
+    "field": "Server",
+    "pattern": "^Zope/"
+  }
 ]

@@ -36,6 +36,26 @@ with ThreadPoolExecutor(max_workers=10) as executor:
 with open('results.json', 'w', encoding='utf-8') as file:
     json.dump(final_result, file,indent=2)
 
+
+
+
+technology_name_to_count = {}
+
+for item in final_result:
+    technology_entries = item.get("technologies", [])
+
+    for technology_entry in technology_entries:
+        technology_name = technology_entry["technology"]
+
+        if technology_name in technology_name_to_count:
+            technology_name_to_count[technology_name] += 1
+        else:
+            technology_name_to_count[technology_name] = 1
+print(f'{len(technology_name_to_count)} tehnologies flound: \n')
+
+for x,y in technology_name_to_count.items():
+    print(f'{x}: {y}')
+
 '''
 domain_1=http_fetch(list_of_domains[1])
 

@@ -1,19 +1,7 @@
-import re
 import json
-from dataclasses import asdict, dataclass
+from dataclasses import asdict
 
-
-@dataclass
-class Evidence:
-    source:str
-    contains:str
-    confidence:float
-@dataclass
-class Match_Result:
-    technology:str
-    category:str
-    evidence:list[Evidence]
-    final_confidence: float
+from detector_modules import cookies_detector, headers_detector, html_body_detector
 
 signature=None
 
@@ -62,92 +50,61 @@ mock_cookies={
 }
 
 
-def build_evidence_text(source, field, content, matched_text):
-    if source == "html_body":
-        return matched_text
-
-    if source == "headers":
-        evidence_text = field
-        evidence_text = evidence_text + ": "
-        evidence_text = evidence_text + content
-        return evidence_text
-
-    if source == "cookies":
-        evidence_text = field
-        evidence_text = evidence_text + ": [...]"
-        return evidence_text
-
-    return matched_text
-
-
-def record_match(result, signature_entry, evidence_text):
-    evidence = Evidence(
-        source=signature_entry["source"],
-        contains=evidence_text,
-        confidence=signature_entry["confidence"]
-    )
-
-    existing_technology = None
-    for item in result:
-        if item["technology"] == signature_entry["technology"]:
-            existing_technology = item
-
-    if existing_technology is not None:
-        existing_technology["evidence"].append(asdict(evidence))
-        updated_confidence = max(existing_technology["final_confidence"], signature_entry["confidence"])
-        existing_technology["final_confidence"] = updated_confidence
-        return
-
-    match_Result = Match_Result(
-        technology=signature_entry["technology"],
-        category=signature_entry["category"],
-        evidence=[asdict(evidence)],
-        final_confidence=signature_entry["confidence"]
-    )
-    result.append(asdict(match_Result))
-
-
-def signature_matches(html_text, headers, cookies):
+# Every module returns its own full Match_Result for one signature - one
+# technology, one evidence item. The same technology can legitimately
+# match several signatures (from different modules, even), so this
+# second, separate pass merges any duplicates into one entry with
+# combined evidence and the max confidence across them.
+def merge_matches_by_technology(raw_matches):
     result = []
-    if signature is None:
-        print("No signatures loaded. Exiting signature matching.")
-        return result
 
-    for i in range(0, len(signature)):
-        content = ""
-        content_key = None
+    for match_result in raw_matches:
+        existing_technology = None
+        for item in result:
+            if item["technology"] == match_result.technology:
+                existing_technology = item
 
-        if signature[i]["source"] == "html_body":
-            content = html_text
-        elif signature[i]["source"] == "headers":
-            content = headers.get(signature[i]["field"], None)
-            content_key = signature[i]["field"]
-        elif signature[i]["source"] == "cookies":
-            content = cookies.get(signature[i]["field"], None)
-            content_key = signature[i]["field"]
-
-        if signature[i]["match_type"] == "exists":
-            if content is not None:
-                evidence_text = build_evidence_text(signature[i]["source"], content_key, content, content)
-                record_match(result, signature[i], evidence_text)
-
-        elif signature[i]["match_type"] == "contains":
-            if content is not None and signature[i]["pattern"] in content:
-                evidence_text = build_evidence_text(signature[i]["source"], content_key, content, signature[i]["pattern"])
-                record_match(result, signature[i], evidence_text)
-
-        elif signature[i]["match_type"] == "regex":
-            if content is not None:
-                match = re.search(signature[i]["pattern"], content)
-                if match:
-                    evidence_text = build_evidence_text(signature[i]["source"], content_key, content, match.group(0))
-                    record_match(result, signature[i], evidence_text)
+        if existing_technology is not None:
+            new_evidence = asdict(match_result)["evidence"]
+            existing_technology["evidence"].extend(new_evidence)
+            existing_technology["final_confidence"] = max(
+                existing_technology["final_confidence"], match_result.final_confidence
+            )
+        else:
+            result.append(asdict(match_result))
 
     return result
+
+
+# Orchestrator only - no match_type logic lives here. For every signature,
+# ask the module that owns its source type whether it matches, and simply
+# collect whatever comes back. Adding a new source type later
+# (robots_txt, dns, ...) means adding one new module and one new elif
+# here, not touching the modules that already exist.
+def signature_matches(html_text, headers, cookies):
+    raw_matches = []
+    if signature is None:
+        print("No signatures loaded. Exiting signature matching.")
+        return raw_matches
+
+    for signature_entry in signature:
+        match_result = None
+
+        if signature_entry["source"] == "html_body":
+            match_result = html_body_detector.match(signature_entry, html_text)
+        elif signature_entry["source"] == "headers":
+            match_result = headers_detector.match(signature_entry, headers)
+        elif signature_entry["source"] == "cookies":
+            match_result = cookies_detector.match(signature_entry, cookies)
+
+        if match_result is not None:
+            raw_matches.append(match_result)
+
+    return merge_matches_by_technology(raw_matches)
+
 
 if __name__ == "__main__":
     data=signature_matches(mock_html, mock_headers,mock_cookies)
 
     for match in data:
         print(match)
-

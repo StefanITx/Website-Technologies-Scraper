@@ -1,17 +1,6 @@
 import requests
 from config.static import HEADERS, TIMEOUT
-from dataclasses import dataclass
-
-@dataclass
-class FetchResult:
-    domain_name:str
-    status_code:int | None = None
-    status:str | None = None
-    hasResponse:bool | None = None
-    response_text:str | None = None
-    headers:dict | None = None
-    cookies:dict | None = None
-    final_url:str | None = None
+from config.models import FetchResult
 
 def http_fetch(domain, headers=HEADERS, timeout=TIMEOUT):
     https_url = f"https://{domain}"
