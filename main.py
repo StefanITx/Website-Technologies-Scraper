@@ -22,7 +22,7 @@ def append_to_final(domain):
     if domain_result.hasResponse is False:
         result["technologies"]=[]
     else:
-        matches=signature_matches(domain_result.response_text, domain_result.headers)
+        matches=signature_matches(domain_result.response_text, domain_result.headers, domain_result.cookies)
         result["technologies"]=matches
     #print(result)
     final_result.append(result)
@@ -31,7 +31,7 @@ def append_to_final(domain):
 #    append_to_final(domain)
 
 with ThreadPoolExecutor(max_workers=10) as executor:
-    executor.map(append_to_final, list_of_domains)  
+    executor_map=list(executor.map(append_to_final, list_of_domains))  
 
 with open('results.json', 'w', encoding='utf-8') as file:
     json.dump(final_result, file,indent=2)
@@ -40,7 +40,7 @@ with open('results.json', 'w', encoding='utf-8') as file:
 domain_1=http_fetch(list_of_domains[1])
 
 print(f"Domain: {domain_1.domain_name}")
-x=signature_matches(domain_1.response_text, domain_1.headers)
+x=signature_matches(domain_1.response_text, domain_1.headers, domain_1.cookies)
 for match in x:
     print(f"Match found: {match}")
 

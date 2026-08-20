@@ -52,79 +52,102 @@ mock_headers = {
     "x-nginx-cache": "WordPress",
 }
 
+mock_cookies={
+    "__cf_bm": "GGDs5laA5XMqPJJRSQle2MABPY2x3d6PfM8wdsqJUWI-1787188943.1781182-1.0.1.1-y8SwY5kZXAT1HewAJ4nafeIiuEMotlwreCuh8fgiV8QKiU2H4x16zAXb93sgPFpTCmiDsrGiF77GEvYGk0M7mQOoq5xdJ._z4TX4prAU9jEXPwtxBI43_ywz6TAmq95C",
+    "_shopify_essential": ":AaAcw0FuAAEAZb1_p-hNNne3IxweH_2v7dHICsMJoH12DoJiOT1OWRvOJfL18mkZADENYWgdLY3XucLaWS2N3cBgFvjX04_SC4zF6VBSR-feAJXOdDi0LnMz5p5gdORHjCGpDswuGIyeYloZnry0E23RBzwGEGiLEzcOwLivZcJnQy_XCiQbQp6MMOfO2kyeiSyM4YOljyMPKIgb6FgGGn23FhEgP_GBSa5gcnruOO38AXPPqLO8jjPasqXraIEUcTYXlhqoLEbrHI3681xRECyzj-x2UxCiUZlwrNRpqreS16gkNSMJKRYJmTntgE5uF1hKZRRj1p260nM20T9fZcNN8RMRjRSLh6d3UcCGc-UsuBjF-YBEZQ0pEjNh0h6UDMFBXQBWEDx6m0lLJt8v8LGb1enbAryNi4ouKZHR5lJkrMzJZQEIYZobDUG6IhUUmfuLrVev3mhCuU2BJgJe1SuBoH7XEjaNWOG64UJ5gIk94IGKgmum_HZ8dkofpMCpdF-20sDOy5uFLpHDjQm0nLzQ5C45QBKr:",
+    "cart_currency": "JPY",
+    "ssr-caching": "cache#desc=hit#varnish=hit_hit#dc#desc=fastly_g",
+    "sec-fetch-unsupported": "1",
+    "PHPSESSID": "82uf6t3vvk4somaa78dmfsb48d"
+}
 
 
-def signature_matches(html_text,headers):
-    result=[]
+def build_evidence_text(source, field, content, matched_text):
+    if source == "html_body":
+        return matched_text
+
+    if source == "headers":
+        evidence_text = field
+        evidence_text = evidence_text + ": "
+        evidence_text = evidence_text + content
+        return evidence_text
+
+    if source == "cookies":
+        evidence_text = field
+        evidence_text = evidence_text + ": [...]"
+        return evidence_text
+
+    return matched_text
+
+
+def record_match(result, signature_entry, evidence_text):
+    evidence = Evidence(
+        source=signature_entry["source"],
+        contains=evidence_text,
+        confidence=signature_entry["confidence"]
+    )
+
+    existing_technology = None
+    for item in result:
+        if item["technology"] == signature_entry["technology"]:
+            existing_technology = item
+
+    if existing_technology is not None:
+        existing_technology["evidence"].append(asdict(evidence))
+        updated_confidence = max(existing_technology["final_confidence"], signature_entry["confidence"])
+        existing_technology["final_confidence"] = updated_confidence
+        return
+
+    match_Result = Match_Result(
+        technology=signature_entry["technology"],
+        category=signature_entry["category"],
+        evidence=[asdict(evidence)],
+        final_confidence=signature_entry["confidence"]
+    )
+    result.append(asdict(match_Result))
+
+
+def signature_matches(html_text, headers, cookies):
+    result = []
     if signature is None:
         print("No signatures loaded. Exiting signature matching.")
         return result
+
     for i in range(0, len(signature)):
-        content=""
-        content_key=None
-        if signature[i]["source"]=="html_body":
-            content=html_text
-        elif signature[i]["source"]=="headers":
-            content=headers.get(signature[i]["field"], "")
-            content_key=signature[i]["field"]
+        content = ""
+        content_key = None
 
+        if signature[i]["source"] == "html_body":
+            content = html_text
+        elif signature[i]["source"] == "headers":
+            content = headers.get(signature[i]["field"], None)
+            content_key = signature[i]["field"]
+        elif signature[i]["source"] == "cookies":
+            content = cookies.get(signature[i]["field"], None)
+            content_key = signature[i]["field"]
 
-        if signature[i]["match_type"]=="contains":
-            if signature[i]["pattern"] in content:
-                con=f"{content_key}: {content}" if content_key else signature[i]["pattern"]
+        if signature[i]["match_type"] == "exists":
+            if content is not None:
+                evidence_text = build_evidence_text(signature[i]["source"], content_key, content, content)
+                record_match(result, signature[i], evidence_text)
 
-                evidence =Evidence(
-                    source=signature[i]["source"],
-                    contains=con,
-                    confidence=signature[i]["confidence"]
-                )
+        elif signature[i]["match_type"] == "contains":
+            if content is not None and signature[i]["pattern"] in content:
+                evidence_text = build_evidence_text(signature[i]["source"], content_key, content, signature[i]["pattern"])
+                record_match(result, signature[i], evidence_text)
 
-                found=False
-                for item in result:
-                    if item["technology"] == signature[i]["technology"]:
-                        item["evidence"].append(asdict(evidence))
-                        item["final_confidence"] = max(item["final_confidence"], signature[i]["confidence"])
-                        found=True
-                        break
+        elif signature[i]["match_type"] == "regex":
+            if content is not None:
+                match = re.search(signature[i]["pattern"], content)
+                if match:
+                    evidence_text = build_evidence_text(signature[i]["source"], content_key, content, match.group(0))
+                    record_match(result, signature[i], evidence_text)
 
-                if not found:
-                    match_Result=Match_Result(
-                        technology=signature[i]["technology"],
-                        category=signature[i]["category"],
-                        evidence=[asdict(evidence)],
-                        final_confidence=signature[i]["confidence"]
-                    )
-                    result.append(asdict(match_Result))
-                
-        elif signature[i]["match_type"]=="regex":
-            match=re.search(signature[i]["pattern"], content)
-            if match:
-                con=f"{content_key}: {match.group(0)}" if content_key else match.group(0)
-                evidence =Evidence(
-                    source=signature[i]["source"],
-                    contains=con,
-                    confidence=signature[i]["confidence"]
-                )
-                found=False
-                for item in result:
-                    if item["technology"] == signature[i]["technology"]:
-                        item["evidence"].append(asdict(evidence))
-                        item["final_confidence"] = max(item["final_confidence"], signature[i]["confidence"])
-                        found=True
-                        break
-                if not found:
-                    match_Result=Match_Result(
-                        technology=signature[i]["technology"],
-                        category=signature[i]["category"],
-                        evidence=[asdict(evidence)],
-                        final_confidence=signature[i]["confidence"]
-                    )
-                    result.append(asdict(match_Result))
-                
     return result
 
 if __name__ == "__main__":
-    x=signature_matches(mock_html, mock_headers)
+    data=signature_matches(mock_html, mock_headers,mock_cookies)
 
-    for match in x:
+    for match in data:
         print(match)
+
