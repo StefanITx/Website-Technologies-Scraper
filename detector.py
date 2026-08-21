@@ -1,6 +1,7 @@
 import json
 from dataclasses import asdict
 
+from config.models import Match_Result
 from detector_modules import cookies_detector, headers_detector, html_body_detector
 
 signature=None
@@ -50,57 +51,46 @@ mock_cookies={
 }
 
 
-# Every module returns its own full Match_Result for one signature - one
-# technology, one evidence item. The same technology can legitimately
-# match several signatures (from different modules, even), so this
-# second, separate pass merges any duplicates into one entry with
-# combined evidence and the max confidence across them.
-def merge_matches_by_technology(raw_matches):
-    result = []
-
-    for match_result in raw_matches:
-        existing_technology = None
-        for item in result:
-            if item["technology"] == match_result.technology:
-                existing_technology = item
-
-        if existing_technology is not None:
-            new_evidence = asdict(match_result)["evidence"]
-            existing_technology["evidence"].extend(new_evidence)
-            existing_technology["final_confidence"] = max(
-                existing_technology["final_confidence"], match_result.final_confidence
-            )
-        else:
-            result.append(asdict(match_result))
-
-    return result
-
-
-# Orchestrator only - no match_type logic lives here. For every signature,
-# ask the module that owns its source type whether it matches, and simply
-# collect whatever comes back. Adding a new source type later
-# (robots_txt, dns, ...) means adding one new module and one new elif
-# here, not touching the modules that already exist.
+# Orchestrator only - no match_type logic lives here. signatures.json is
+# grouped one object per technology, each carrying a "sources" list, so a
+# technology's evidence is already together in the input - no separate
+# merge-by-technology pass needed afterward. For every source entry, ask
+# the module that owns its source type whether it matches, and collect
+# whatever Evidence comes back. Adding a new source type later (robots_txt,
+# dns, ...) means adding one new module and one new elif here, not
+# touching the modules that already exist.
 def signature_matches(html_text, headers, cookies):
-    raw_matches = []
+    results = []
     if signature is None:
         print("No signatures loaded. Exiting signature matching.")
-        return raw_matches
+        return results
 
-    for signature_entry in signature:
-        match_result = None
+    for technology_entry in signature:
+        evidence_list = []
 
-        if signature_entry["source"] == "html_body":
-            match_result = html_body_detector.match(signature_entry, html_text)
-        elif signature_entry["source"] == "headers":
-            match_result = headers_detector.match(signature_entry, headers)
-        elif signature_entry["source"] == "cookies":
-            match_result = cookies_detector.match(signature_entry, cookies)
+        for source_entry in technology_entry["sources"]:
+            evidence = None
 
-        if match_result is not None:
-            raw_matches.append(match_result)
+            if source_entry["source"] == "html_body":
+                evidence = html_body_detector.match(source_entry, html_text)
+            elif source_entry["source"] == "headers":
+                evidence = headers_detector.match(source_entry, headers)
+            elif source_entry["source"] == "cookies":
+                evidence = cookies_detector.match(source_entry, cookies)
 
-    return merge_matches_by_technology(raw_matches)
+            if evidence is not None:
+                evidence_list.append(evidence)
+
+        if evidence_list:
+            final_confidence = max(evidence.confidence for evidence in evidence_list)
+            results.append(asdict(Match_Result(
+                technology=technology_entry["technology"],
+                category=technology_entry["category"],
+                evidence=evidence_list,
+                final_confidence=final_confidence
+            )))
+
+    return results
 
 
 if __name__ == "__main__":

@@ -51,7 +51,7 @@ for item in final_result:
             technology_name_to_count[technology_name] += 1
         else:
             technology_name_to_count[technology_name] = 1
-print(f'{len(technology_name_to_count)} tehnologies flound: \n')
+print(f'{len(technology_name_to_count)} tehnologies flound! \n')
 
 for x,y in technology_name_to_count.items():
     print(f'{x}: {y}')
