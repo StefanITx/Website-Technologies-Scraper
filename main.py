@@ -8,6 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 final_result=[]
 
+
 df=pd.read_parquet("domains.snappy.parquet", columns=["root_domain"])
 list_of_domains=df["root_domain"].astype(str).tolist()
 
@@ -35,34 +36,21 @@ with ThreadPoolExecutor(max_workers=10) as executor:
     executor_map=list(executor.map(append_to_final, list_of_domains))  
 
 with open('results.json', 'w', encoding='utf-8') as file:
+    technology_name_to_count = {'Comment':'Stats','Number of technologies found': 0,
+                                'Listing':'Technology/Number of evidences'}
+
+    for item in final_result:
+        technology_entries = item.get("technologies", [])
+
+        for technology_entry in technology_entries:
+            technology_name = technology_entry["technology"]
+
+            if technology_name in technology_name_to_count:
+                technology_name_to_count[technology_name] += 1
+            else:
+                technology_name_to_count[technology_name] = 1
+        technology_name_to_count['Number of technologies found'] = len(technology_name_to_count)
+    print(f'{technology_name_to_count['Number of technologies found']} technologies found! \n')
+    for x, y in technology_name_to_count.items():
+        print(f'{x}: {y}')
     json.dump(final_result, file,indent=2)
-
-
-
-
-technology_name_to_count = {}
-
-for item in final_result:
-    technology_entries = item.get("technologies", [])
-
-    for technology_entry in technology_entries:
-        technology_name = technology_entry["technology"]
-
-        if technology_name in technology_name_to_count:
-            technology_name_to_count[technology_name] += 1
-        else:
-            technology_name_to_count[technology_name] = 1
-print(f'{len(technology_name_to_count)} tehnologies flound! \n')
-
-for x,y in technology_name_to_count.items():
-    print(f'{x}: {y}')
-
-'''
-domain_1=http_fetch(list_of_domains[1])
-
-print(f"Domain: {domain_1.domain_name}")
-x=signature_matches(domain_1.response_text, domain_1.headers, domain_1.cookies)
-for match in x:
-    print(f"Match found: {match}")
-
-'''
