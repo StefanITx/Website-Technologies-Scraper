@@ -1,8 +1,8 @@
 import json
 from dataclasses import asdict
 
-from config.models import Match_Result
-from detector_modules import cookies_detector, headers_detector, html_body_detector
+from config.models import MatchResult
+from detector_modules import cookies_detector, headers_detector, html_body_detector, dns_detector
 
 signature=None
 
@@ -59,7 +59,7 @@ mock_cookies={
 # whatever Evidence comes back. Adding a new source type later (robots_txt,
 # dns, ...) means adding one new module and one new elif here, not
 # touching the modules that already exist.
-def signature_matches(html_text, headers, cookies):
+def signature_matches(html_text, headers, cookies,dns_result):
     results = []
     if signature is None:
         print("No signatures loaded. Exiting signature matching.")
@@ -77,13 +77,15 @@ def signature_matches(html_text, headers, cookies):
                 evidence = headers_detector.match(source_entry, headers)
             elif source_entry["source"] == "cookies":
                 evidence = cookies_detector.match(source_entry, cookies)
+            elif source_entry["source"] == "dns" and dns_result is not None:
+                evidence = dns_detector.match(source_entry, dns_result)
 
             if evidence is not None:
                 evidence_list.append(evidence)
 
         if evidence_list:
             final_confidence = max(evidence.confidence for evidence in evidence_list)
-            results.append(asdict(Match_Result(
+            results.append(asdict(MatchResult(
                 technology=technology_entry["technology"],
                 category=technology_entry["category"],
                 evidence=evidence_list,

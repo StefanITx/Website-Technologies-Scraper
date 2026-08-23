@@ -38,7 +38,7 @@
   },
   {
     "technology": "Adobe ColdFusion",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -152,7 +152,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Adobe GoLive(?:\\s([\\d.]+))?\"|content=\"Adobe GoLive(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Adobe GoLive(?:\\s([\\d.]+))?\"|content=\"Adobe GoLive(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -164,7 +164,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Adobe RoboHelp(?: ([\\d]+))?\"|content=\"Adobe RoboHelp(?: ([\\d]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Adobe RoboHelp(?: ([\\d]+))?\"|content=\"Adobe RoboHelp(?: ([\\d]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -177,7 +177,7 @@
   },
   {
     "technology": "Afterpay",
-    "category": "payment_processor",
+    "category": "payment_processors",
     "sources": [
       {
         "source": "html_body",
@@ -244,7 +244,7 @@
   },
   {
     "technology": "Akka HTTP",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -257,12 +257,12 @@
   },
   {
     "technology": "All in One SEO",
-    "category": "plugin",
+    "category": "seo",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"all in one seo \\(aioseo\\) ([\\d\\.]+)\"|content=\"all in one seo \\(aioseo\\) ([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"all in one seo \\(aioseo\\) ([\\d\\.]+)\"|content=\"all in one seo \\(aioseo\\) ([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -287,12 +287,12 @@
   },
   {
     "technology": "All in One SEO Pack",
-    "category": "plugin",
+    "category": "seo",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"All in One SEO \\(AIOSEO\\)\\s([\\d.]+)$\"|content=\"All in One SEO \\(AIOSEO\\)\\s([\\d.]+)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"All in One SEO \\(AIOSEO\\)\\s([\\d.]+)$\"|content=\"All in One SEO \\(AIOSEO\\)\\s([\\d.]+)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -335,7 +335,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"(?:Ametys|Anyware Technologies)\"|content=\"(?:Ametys|Anyware Technologies)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"(?:Ametys|Anyware Technologies)\"|content=\"(?:Ametys|Anyware Technologies)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -348,19 +348,19 @@
   },
   {
     "technology": "AMP for WordPress",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"AMP Plugin v(\\d+\\.\\d+.*)$\"|content=\"AMP Plugin v(\\d+\\.\\d+.*)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"AMP Plugin v(\\d+\\.\\d+.*)$\"|content=\"AMP Plugin v(\\d+\\.\\d+.*)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "AngularJS",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -396,7 +396,7 @@
   },
   {
     "technology": "AOLserver",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -409,7 +409,7 @@
   },
   {
     "technology": "Apache APISIX",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -428,7 +428,7 @@
   },
   {
     "technology": "Apache HTTP Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -459,7 +459,7 @@
   },
   {
     "technology": "Apache Tomcat",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -479,7 +479,7 @@
   },
   {
     "technology": "Apache Traffic Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -504,7 +504,7 @@
   },
   {
     "technology": "Arastta",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "headers",
@@ -565,7 +565,7 @@
   },
   {
     "technology": "Artifactory Web Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -583,7 +583,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Asciidoctor\\s([\\d\\.]+)$\"|content=\"Asciidoctor\\s([\\d\\.]+)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Asciidoctor\\s([\\d\\.]+)$\"|content=\"Asciidoctor\\s([\\d\\.]+)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -595,7 +595,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Bitbucket\"|content=\"Bitbucket\"[^>]*name=\"application\\-name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Bitbucket\"|content=\"Bitbucket\"[^>]*name=\"application\\-name\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -649,20 +649,20 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"JIRA\"|content=\"JIRA\"[^>]*name=\"application\\-name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"JIRA\"|content=\"JIRA\"[^>]*name=\"application\\-name\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"data\\-version\"[^>]*content=\"([\\d.]+)\"|content=\"([\\d.]+)\"[^>]*name=\"data\\-version\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"data\\-version\"[^>]*content=\"([\\d.]+)\"|content=\"([\\d.]+)\"[^>]*name=\"data\\-version\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Auth0",
-    "category": "security_ssl",
+    "category": "authentication",
     "sources": [
       {
         "source": "headers",
@@ -691,7 +691,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"AWStats ([\\d.]+(?: \\(build [\\d.]+\\))?)\"|content=\"AWStats ([\\d.]+(?: \\(build [\\d.]+\\))?)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"AWStats ([\\d.]+(?: \\(build [\\d.]+\\))?)\"|content=\"AWStats ([\\d.]+(?: \\(build [\\d.]+\\))?)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -704,7 +704,7 @@
   },
   {
     "technology": "Axios",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -716,7 +716,7 @@
   },
   {
     "technology": "Backbone.js",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -746,7 +746,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Backdrop CMS(?:\\s([\\d.]+))?\"|content=\"Backdrop CMS(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Backdrop CMS(?:\\s([\\d.]+))?\"|content=\"Backdrop CMS(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -758,14 +758,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"BIGACE ([\\d.]+)\"|content=\"BIGACE ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"BIGACE ([\\d.]+)\"|content=\"BIGACE ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Bigware",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -789,7 +789,7 @@
   },
   {
     "technology": "Bitrix24",
-    "category": "customer_support",
+    "category": "crm",
     "sources": [
       {
         "source": "html_body",
@@ -807,7 +807,7 @@
   },
   {
     "technology": "Blinger",
-    "category": "customer_support",
+    "category": "crm",
     "sources": [
       {
         "source": "html_body",
@@ -824,7 +824,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Bolt\"|content=\"Bolt\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Bolt\"|content=\"Bolt\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -843,7 +843,7 @@
   },
   {
     "technology": "Bootstrap",
-    "category": "css_framework",
+    "category": "ui_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -867,7 +867,7 @@
   },
   {
     "technology": "BuddyPress",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "html_body",
@@ -890,7 +890,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Bugzilla ?([\\d.]+)?\"|content=\"Bugzilla ?([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Bugzilla ?([\\d.]+)?\"|content=\"Bugzilla ?([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -921,7 +921,7 @@
   },
   {
     "technology": "Caddy",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -934,7 +934,7 @@
   },
   {
     "technology": "CakePHP",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "cookies",
@@ -945,7 +945,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"CakePHP\"|content=\"CakePHP\"[^>]*name=\"application\\-name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"CakePHP\"|content=\"CakePHP\"[^>]*name=\"application\\-name\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -957,7 +957,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Cecil(?: ([0-9.]+))?$\"|content=\"Cecil(?: ([0-9.]+))?$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Cecil(?: ([0-9.]+))?$\"|content=\"Cecil(?: ([0-9.]+))?$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -996,14 +996,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Chamilo ([\\d.]+)\"|content=\"Chamilo ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Chamilo ([\\d.]+)\"|content=\"Chamilo ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Cherokee",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -1016,7 +1016,7 @@
   },
   {
     "technology": "CherryPy",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -1034,7 +1034,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Chevereto\\s(?:[\\d\\.]+)\"|content=\"Chevereto\\s(?:[\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Chevereto\\s(?:[\\d\\.]+)\"|content=\"Chevereto\\s(?:[\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -1077,8 +1077,29 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"image\"[^>]*content=\"//cdn\\.cloudflare\"|content=\"//cdn\\.cloudflare\"[^>]*name=\"image\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"image\"[^>]*content=\"//cdn\\.cloudflare\"|content=\"//cdn\\.cloudflare\"[^>]*name=\"image\")[^>]*>",
         "confidence": 0.9
+      },
+      {
+        "source": "dns",
+        "field": "name_servers",
+        "match_type": "contains",
+        "pattern": ".cloudflare.com",
+        "confidence": 0.8
+      },
+      {
+        "source": "dns",
+        "field": "start_of_authority",
+        "match_type": "contains",
+        "pattern": ".cloudflare.com",
+        "confidence": 0.8
+      },
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "cloudflare_dashboard_sso=",
+        "confidence": 0.85
       }
     ]
   },
@@ -1095,7 +1116,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"CMS\\ Made\\ Simple\"|content=\"CMS\\ Made\\ Simple\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"CMS\\ Made\\ Simple\"|content=\"CMS\\ Made\\ Simple\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1107,7 +1128,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"CMSimple( [\\d.]+)?\"|content=\"CMSimple( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"CMSimple( [\\d.]+)?\"|content=\"CMSimple( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1119,14 +1140,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Coaster CMS v([\\d.]+)$\"|content=\"Coaster CMS v([\\d.]+)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Coaster CMS v([\\d.]+)$\"|content=\"Coaster CMS v([\\d.]+)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "CodeIgniter",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "cookies",
@@ -1163,7 +1184,7 @@
   },
   {
     "technology": "Commerce Server",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "headers",
@@ -1186,7 +1207,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"concrete5(?: - ([\\d.]+)$)?\"|content=\"concrete5(?: - ([\\d.]+)$)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"concrete5(?: - ([\\d.]+)$)?\"|content=\"concrete5(?: - ([\\d.]+)$)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -1204,7 +1225,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Contao Open Source CMS$\"|content=\"Contao Open Source CMS$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Contao Open Source CMS$\"|content=\"Contao Open Source CMS$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1216,7 +1237,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Contenido ([\\d.]+)\"|content=\"Contenido ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Contenido ([\\d.]+)\"|content=\"Contenido ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1235,7 +1256,7 @@
   },
   {
     "technology": "Cosmoshop",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
@@ -1258,14 +1279,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Cotonti\"|content=\"Cotonti\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Cotonti\"|content=\"Cotonti\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "CouchDB",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -1347,12 +1368,12 @@
   },
   {
     "technology": "CubeCart",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"cubecart\"|content=\"cubecart\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"cubecart\"|content=\"cubecart\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1371,7 +1392,7 @@
   },
   {
     "technology": "Dancer",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -1396,14 +1417,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"DataLife\\ Engine\"|content=\"DataLife\\ Engine\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"DataLife\\ Engine\"|content=\"DataLife\\ Engine\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "DataTables",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -1452,7 +1473,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"DeskPRO.+$\"|content=\"DeskPRO.+$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"DeskPRO.+$\"|content=\"DeskPRO.+$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1496,7 +1517,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Discourse(?: ?/?([\\d.]+\\d))?\"|content=\"Discourse(?: ?/?([\\d.]+\\d))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Discourse(?: ?/?([\\d.]+\\d))?\"|content=\"Discourse(?: ?/?([\\d.]+\\d))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1515,7 +1536,7 @@
   },
   {
     "technology": "Django",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "cookies",
@@ -1564,7 +1585,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"DotNetNuke\"|content=\"DotNetNuke\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"DotNetNuke\"|content=\"DotNetNuke\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -1602,12 +1623,19 @@
         "match_type": "contains",
         "pattern": "<!-- This comment is expected by the docker HEALTHCHECK  -->",
         "confidence": 0.75
+      },
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "docker-verification=",
+        "confidence": 0.85
       }
     ]
   },
   {
     "technology": "Dojo",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -1631,7 +1659,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Dokeos\"|content=\"Dokeos\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Dokeos\"|content=\"Dokeos\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -1655,7 +1683,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"DokuWiki( Release [\\d-]+)?\"|content=\"DokuWiki( Release [\\d-]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"DokuWiki( Release [\\d-]+)?\"|content=\"DokuWiki( Release [\\d-]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1679,7 +1707,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Doxygen ([\\d.]+)\"|content=\"Doxygen ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Doxygen ([\\d.]+)\"|content=\"Doxygen ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -1697,7 +1725,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Adobe dreamweaver$\"|content=\"Adobe dreamweaver$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Adobe dreamweaver$\"|content=\"Adobe dreamweaver$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -1747,7 +1775,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Drupal(?:\\s([\\d.]+))?\"|content=\"Drupal(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Drupal(?:\\s([\\d.]+))?\"|content=\"Drupal(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -1772,7 +1800,7 @@
   },
   {
     "technology": "Drupal Commerce",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
@@ -1827,7 +1855,7 @@
   },
   {
     "technology": "EC-CUBE",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
@@ -1857,7 +1885,7 @@
   },
   {
     "technology": "ElasticPress",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "headers",
@@ -1874,7 +1902,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Eleanor\"|content=\"Eleanor\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Eleanor\"|content=\"Eleanor\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -1893,7 +1921,7 @@
   },
   {
     "technology": "EmbedThis Appweb",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -1906,7 +1934,7 @@
   },
   {
     "technology": "Ember.js",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -1950,7 +1978,7 @@
   },
   {
     "technology": "EspoCRM",
-    "category": "customer_support",
+    "category": "crm",
     "sources": [
       {
         "source": "html_body",
@@ -1986,14 +2014,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"experiencedCMS$\"|content=\"experiencedCMS$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"experiencedCMS$\"|content=\"experiencedCMS$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Express",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -2036,7 +2064,7 @@
   },
   {
     "technology": "ExtJS",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -2066,7 +2094,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"eZ\\ Publish\"|content=\"eZ\\ Publish\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"eZ\\ Publish\"|content=\"eZ\\ Publish\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2184,7 +2212,7 @@
   },
   {
     "technology": "Fat-Free Framework",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -2259,7 +2287,7 @@
   },
   {
     "technology": "Flask",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -2277,7 +2305,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"Generator\"[^>]*content=\"Flip PDF Professional ([\\d\\.]+) at https?://www\\.flipbuilder\\.com\"|content=\"Flip PDF Professional ([\\d\\.]+) at https?://www\\.flipbuilder\\.com\"[^>]*name=\"Generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"Generator\"[^>]*content=\"Flip PDF Professional ([\\d\\.]+) at https?://www\\.flipbuilder\\.com\"|content=\"Flip PDF Professional ([\\d\\.]+) at https?://www\\.flipbuilder\\.com\"[^>]*name=\"Generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -2302,12 +2330,12 @@
   },
   {
     "technology": "Flutter",
-    "category": "css_framework",
+    "category": "ui_frameworks",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"id\"[^>]*content=\"flutterweb-theme$\"|content=\"flutterweb-theme$\"[^>]*name=\"id\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"id\"[^>]*content=\"flutterweb-theme$\"|content=\"flutterweb-theme$\"[^>]*name=\"id\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2331,14 +2359,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Fork CMS$\"|content=\"Fork CMS$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Fork CMS$\"|content=\"Fork CMS$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Formstone",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -2386,12 +2414,12 @@
   },
   {
     "technology": "Frappe",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"frappe$\"|content=\"frappe$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"frappe$\"|content=\"frappe$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2428,25 +2456,25 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"FrontPage\\.\"|content=\"FrontPage\\.\"[^>]*name=\"ProgId\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"FrontPage\\.\"|content=\"FrontPage\\.\"[^>]*name=\"ProgId\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft FrontPage(?:\\s((?:Express )?[\\d.]+))?\"|content=\"Microsoft FrontPage(?:\\s((?:Express )?[\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft FrontPage(?:\\s((?:Express )?[\\d.]+))?\"|content=\"Microsoft FrontPage(?:\\s((?:Express )?[\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Gatsby",
-    "category": "javascript_framework",
+    "category": "static_site_generator",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Gatsby(?: ([0-9.]+))?$\"|content=\"Gatsby(?: ([0-9.]+))?$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Gatsby(?: ([0-9.]+))?$\"|content=\"Gatsby(?: ([0-9.]+))?$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2471,7 +2499,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"GetSimple\"|content=\"GetSimple\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"GetSimple\"|content=\"GetSimple\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2489,7 +2517,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Ghost(?:\\s([\\d.]+))?\"|content=\"Ghost(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Ghost(?:\\s([\\d.]+))?\"|content=\"Ghost(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2501,7 +2529,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"\\bgit/([\\d.]+\\d)\"|content=\"\\bgit/([\\d.]+\\d)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"\\bgit/([\\d.]+\\d)\"|content=\"\\bgit/([\\d.]+\\d)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2513,7 +2541,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"GitBook ([\\d.]+)?\"|content=\"GitBook ([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"GitBook ([\\d.]+)?\"|content=\"GitBook ([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2531,7 +2559,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"keywords\"[^>]*content=\"go,git,self-hosted,gitea$\"|content=\"go,git,self-hosted,gitea$\"[^>]*name=\"keywords\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"keywords\"[^>]*content=\"go,git,self-hosted,gitea$\"|content=\"go,git,self-hosted,gitea$\"[^>]*name=\"keywords\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -2555,7 +2583,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"og:site_name\"[^>]*content=\"GitLab$\"|content=\"GitLab$\"[^>]*name=\"og:site_name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"og:site_name\"[^>]*content=\"GitLab$\"|content=\"GitLab$\"[^>]*name=\"og:site_name\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -2586,7 +2614,7 @@
   },
   {
     "technology": "GlassFish",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2599,7 +2627,7 @@
   },
   {
     "technology": "GLPI",
-    "category": "customer_support",
+    "category": "crm",
     "sources": [
       {
         "source": "html_body",
@@ -2611,7 +2639,7 @@
   },
   {
     "technology": "GoAhead",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2635,7 +2663,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"keywords\"[^>]*content=\"go,\\ git,\\ self\\-hosted,\\ gogs\"|content=\"go,\\ git,\\ self\\-hosted,\\ gogs\"[^>]*name=\"keywords\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"keywords\"[^>]*content=\"go,\\ git,\\ self\\-hosted,\\ gogs\"|content=\"go,\\ git,\\ self\\-hosted,\\ gogs\"[^>]*name=\"keywords\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -2660,7 +2688,7 @@
   },
   {
     "technology": "Google Web Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2696,7 +2724,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"store\\-config\"[^>]*content=\"graphqlMethod\"|content=\"graphqlMethod\"[^>]*name=\"store\\-config\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"store\\-config\"[^>]*content=\"graphqlMethod\"|content=\"graphqlMethod\"[^>]*name=\"store\\-config\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2708,14 +2736,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"GravCMS(?:\\s([\\d.]+))?\"|content=\"GravCMS(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"GravCMS(?:\\s([\\d.]+))?\"|content=\"GravCMS(?:\\s([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Grin",
-    "category": "marketing_tag_manager",
+    "category": "marketing_automation",
     "sources": [
       {
         "source": "html_body",
@@ -2727,7 +2755,7 @@
   },
   {
     "technology": "gunicorn",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2740,7 +2768,7 @@
   },
   {
     "technology": "Handlebars",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -2782,7 +2810,7 @@
   },
   {
     "technology": "HCL Domino",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2800,7 +2828,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Hexo(?: v?([\\d.]+))?\"|content=\"Hexo(?: v?([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Hexo(?: v?([\\d.]+))?\"|content=\"Hexo(?: v?([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -2813,7 +2841,7 @@
   },
   {
     "technology": "HHVM",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2844,7 +2872,7 @@
   },
   {
     "technology": "Hostinger",
-    "category": "hosting_provider",
+    "category": "hosting",
     "sources": [
       {
         "source": "headers",
@@ -2852,12 +2880,19 @@
         "match_type": "contains",
         "confidence": 0.85,
         "pattern": "hostinger"
+      },
+      {
+        "source": "dns",
+        "field": "start_of_authority",
+        "match_type": "regex",
+        "pattern": "\\.(?:dns-parking|hostinger)\\.com",
+        "confidence": 0.8
       }
     ]
   },
   {
     "technology": "HP iLO",
-    "category": "web_server",
+    "category": "remote_access",
     "sources": [
       {
         "source": "headers",
@@ -2888,7 +2923,7 @@
   },
   {
     "technology": "IBM HTTP Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2901,7 +2936,7 @@
   },
   {
     "technology": "IIS",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -2949,7 +2984,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"ImpressCMS\"|content=\"ImpressCMS\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"ImpressCMS\"|content=\"ImpressCMS\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -2967,7 +3002,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"ImpressPages(?: CMS)?( [\\d.]*)?\"|content=\"ImpressPages(?: CMS)?( [\\d.]*)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"ImpressPages(?: CMS)?( [\\d.]*)?\"|content=\"ImpressPages(?: CMS)?( [\\d.]*)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -2979,7 +3014,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Indexhibit\"|content=\"Indexhibit\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Indexhibit\"|content=\"Indexhibit\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3003,14 +3038,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"InstantCMS\"|content=\"InstantCMS\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"InstantCMS\"|content=\"InstantCMS\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Intel Active Management Technology",
-    "category": "web_server",
+    "category": "remote_access",
     "sources": [
       {
         "source": "headers",
@@ -3035,7 +3070,7 @@
   },
   {
     "technology": "JBoss Application Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -3048,7 +3083,7 @@
   },
   {
     "technology": "JBoss Web",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -3066,7 +3101,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Jekyll\\sv([\\d.]+)?\"|content=\"Jekyll\\sv([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Jekyll\\sv([\\d.]+)?\"|content=\"Jekyll\\sv([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3110,7 +3145,7 @@
   },
   {
     "technology": "Jetty",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -3123,7 +3158,7 @@
   },
   {
     "technology": "Jitsi",
-    "category": "customer_support",
+    "category": "live_chat",
     "sources": [
       {
         "source": "html_body",
@@ -3135,7 +3170,7 @@
   },
   {
     "technology": "JivoChat",
-    "category": "customer_support",
+    "category": "live_chat",
     "sources": [
       {
         "source": "html_body",
@@ -3165,7 +3200,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Joomla!(?: ([\\d.]+))?\"|content=\"Joomla!(?: ([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Joomla!(?: ([\\d.]+))?\"|content=\"Joomla!(?: ([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3184,7 +3219,7 @@
   },
   {
     "technology": "jQuery",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -3208,7 +3243,7 @@
   },
   {
     "technology": "jQuery UI",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -3232,7 +3267,7 @@
   },
   {
     "technology": "JSZip",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -3261,7 +3296,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Kentico CMS ([\\d.R]+ \\(build [\\d.]+\\))\"|content=\"Kentico CMS ([\\d.R]+ \\(build [\\d.]+\\))\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Kentico CMS ([\\d.R]+ \\(build [\\d.]+\\))\"|content=\"Kentico CMS ([\\d.R]+ \\(build [\\d.]+\\))\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3318,7 +3353,7 @@
   },
   {
     "technology": "Koa",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -3336,7 +3371,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Koala\\ Web\\ Framework\\ CMS\"|content=\"Koala\\ Web\\ Framework\\ CMS\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Koala\\ Web\\ Framework\\ CMS\"|content=\"Koala\\ Web\\ Framework\\ CMS\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3354,7 +3389,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Koha ([\\d.]+)$\"|content=\"Koha ([\\d.]+)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Koha ([\\d.]+)$\"|content=\"Koha ([\\d.]+)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3373,7 +3408,7 @@
   },
   {
     "technology": "Kohana",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -3424,7 +3459,7 @@
   },
   {
     "technology": "Ktor",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -3444,7 +3479,7 @@
   },
   {
     "technology": "Laravel",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "cookies",
@@ -3461,27 +3496,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"LEPTON\"|content=\"LEPTON\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"LEPTON\"|content=\"LEPTON\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
-    "technology": "Liferay",
-    "category": "cms",
-    "sources": [
-      {
-        "source": "headers",
-        "field": "Liferay-Portal",
-        "match_type": "regex",
-        "confidence": 0.85,
-        "pattern": "[a-z\\s]+([\\d.]+)"
-      }
-    ]
-  },
-  {
     "technology": "Lift",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -3494,7 +3516,7 @@
   },
   {
     "technology": "Lightbox",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -3506,7 +3528,7 @@
   },
   {
     "technology": "lighttpd",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -3519,7 +3541,7 @@
   },
   {
     "technology": "LiteSpeed",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -3539,7 +3561,7 @@
   },
   {
     "technology": "Lodash",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -3564,7 +3586,7 @@
   },
   {
     "technology": "Magento",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -3642,7 +3664,7 @@
   },
   {
     "technology": "MailChimp",
-    "category": "email_marketing",
+    "category": "marketing_automation",
     "sources": [
       {
         "source": "html_body",
@@ -3673,12 +3695,19 @@
         "match_type": "contains",
         "pattern": "chimpstatic.com/mcjs-connected",
         "confidence": 0.8
+      },
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "spf.mandrillapp.com",
+        "confidence": 0.8
       }
     ]
   },
   {
     "technology": "Mailman",
-    "category": "email_marketing",
+    "category": "email",
     "sources": [
       {
         "source": "html_body",
@@ -3696,7 +3725,7 @@
   },
   {
     "technology": "Marked",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -3750,19 +3779,19 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"apple\\-itunes\\-app\"[^>]*content=\"app\\-id=737216887\"|content=\"app\\-id=737216887\"[^>]*name=\"apple\\-itunes\\-app\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"apple\\-itunes\\-app\"[^>]*content=\"app\\-id=737216887\"|content=\"app\\-id=737216887\"[^>]*name=\"apple\\-itunes\\-app\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"(?:Matomo|Piwik) - Open Source Web Analytics\"|content=\"(?:Matomo|Piwik) - Open Source Web Analytics\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"(?:Matomo|Piwik) - Open Source Web Analytics\"|content=\"(?:Matomo|Piwik) - Open Source Web Analytics\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"google\\-play\\-app\"[^>]*content=\"app\\-id=org\\.piwik\\.mobile2\"|content=\"app\\-id=org\\.piwik\\.mobile2\"[^>]*name=\"google\\-play\\-app\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"google\\-play\\-app\"[^>]*content=\"app\\-id=org\\.piwik\\.mobile2\"|content=\"app\\-id=org\\.piwik\\.mobile2\"[^>]*name=\"google\\-play\\-app\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3786,7 +3815,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Mattermost$\"|content=\"Mattermost$\"[^>]*name=\"application\\-name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Mattermost$\"|content=\"Mattermost$\"[^>]*name=\"application\\-name\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3799,7 +3828,7 @@
   },
   {
     "technology": "Mautic",
-    "category": "marketing_tag_manager",
+    "category": "marketing_automation",
     "sources": [
       {
         "source": "html_body",
@@ -3822,7 +3851,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"MediaWiki ?(.+)$\"|content=\"MediaWiki ?(.+)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"MediaWiki ?(.+)$\"|content=\"MediaWiki ?(.+)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3852,13 +3881,13 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Melis\\ Platform\\.\"|content=\"Melis\\ Platform\\.\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Melis\\ Platform\\.\"|content=\"Melis\\ Platform\\.\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"powered\\-by\"[^>]*content=\"Melis\\ CMS\\.\"|content=\"Melis\\ CMS\\.\"[^>]*name=\"powered\\-by\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"powered\\-by\"[^>]*content=\"Melis\\ CMS\\.\"|content=\"Melis\\ CMS\\.\"[^>]*name=\"powered\\-by\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3877,7 +3906,7 @@
   },
   {
     "technology": "Microsoft ASP.NET",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -3933,13 +3962,13 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"Excel\\.\"|content=\"Excel\\.\"[^>]*name=\"ProgId\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"Excel\\.\"|content=\"Excel\\.\"[^>]*name=\"ProgId\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft Excel( [\\d.]+)?\"|content=\"Microsoft Excel( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft Excel( [\\d.]+)?\"|content=\"Microsoft Excel( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3957,13 +3986,13 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"PowerPoint\\.\"|content=\"PowerPoint\\.\"[^>]*name=\"ProgId\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"PowerPoint\\.\"|content=\"PowerPoint\\.\"[^>]*name=\"ProgId\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft PowerPoint ( [\\d.]+)?\"|content=\"Microsoft PowerPoint ( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft PowerPoint ( [\\d.]+)?\"|content=\"Microsoft PowerPoint ( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -3981,13 +4010,13 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"Publisher\\.\"|content=\"Publisher\\.\"[^>]*name=\"ProgId\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"Publisher\\.\"|content=\"Publisher\\.\"[^>]*name=\"ProgId\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft Publisher( [\\d.]+)?\"|content=\"Microsoft Publisher( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft Publisher( [\\d.]+)?\"|content=\"Microsoft Publisher( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4030,7 +4059,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft\\ SharePoint\"|content=\"Microsoft\\ SharePoint\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft\\ SharePoint\"|content=\"Microsoft\\ SharePoint\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -4042,13 +4071,13 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"Word\\.\"|content=\"Word\\.\"[^>]*name=\"ProgId\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"ProgId\"[^>]*content=\"Word\\.\"|content=\"Word\\.\"[^>]*name=\"ProgId\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft Word( [\\d.]+)?\"|content=\"Microsoft Word( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Microsoft Word( [\\d.]+)?\"|content=\"Microsoft Word( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4073,7 +4102,7 @@
   },
   {
     "technology": "mini_httpd",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -4091,7 +4120,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Misskey\"|content=\"Misskey\"[^>]*name=\"application\\-name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Misskey\"|content=\"Misskey\"[^>]*name=\"application\\-name\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4104,7 +4133,7 @@
   },
   {
     "technology": "MochiWeb",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -4176,12 +4205,12 @@
   },
   {
     "technology": "Modified eCommerce",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"by\\ modified\\ eCommerce\\ Shopsoftware\"|content=\"by\\ modified\\ eCommerce\\ Shopsoftware\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"by\\ modified\\ eCommerce\\ Shopsoftware\"|content=\"by\\ modified\\ eCommerce\\ Shopsoftware\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -4200,7 +4229,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"MODX[^\\d.]*([\\d.]+)?\"|content=\"MODX[^\\d.]*([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"MODX[^\\d.]*([\\d.]+)?\"|content=\"MODX[^\\d.]*([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4261,7 +4290,7 @@
   },
   {
     "technology": "Mojolicious",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -4281,7 +4310,7 @@
   },
   {
     "technology": "Mollom",
-    "category": "security_ssl",
+    "category": "security",
     "sources": [
       {
         "source": "html_body",
@@ -4299,7 +4328,7 @@
   },
   {
     "technology": "Moment.js",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -4311,7 +4340,7 @@
   },
   {
     "technology": "Mongrel",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -4324,7 +4353,7 @@
   },
   {
     "technology": "Mono",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -4337,7 +4366,7 @@
   },
   {
     "technology": "MonsterInsights",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "html_body",
@@ -4366,7 +4395,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"keywords\"[^>]*content=\"moodle\"|content=\"moodle\"[^>]*name=\"keywords\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"keywords\"[^>]*content=\"moodle\"|content=\"moodle\"[^>]*name=\"keywords\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4379,7 +4408,7 @@
   },
   {
     "technology": "MooTools",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -4414,7 +4443,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Movable\\ Type\"|content=\"Movable\\ Type\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Movable\\ Type\"|content=\"Movable\\ Type\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -4426,7 +4455,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Mura\\sCMS\\s([\\d\\.]+)\"|content=\"Mura\\sCMS\\s([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Mura\\sCMS\\s([\\d\\.]+)\"|content=\"Mura\\sCMS\\s([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -4463,7 +4492,7 @@
   },
   {
     "technology": "Next.js",
-    "category": "web_framework",
+    "category": "static_site_generator",
     "sources": [
       {
         "source": "headers",
@@ -4506,12 +4535,12 @@
   },
   {
     "technology": "NextGEN Gallery",
-    "category": "plugin",
+    "category": "photo_galleries",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"NextGEN\"[^>]*content=\"([\\d.]+)\"|content=\"([\\d.]+)\"[^>]*name=\"NextGEN\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"NextGEN\"[^>]*content=\"([\\d.]+)\"|content=\"([\\d.]+)\"[^>]*name=\"NextGEN\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4535,14 +4564,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"NexusPHP$\"|content=\"NexusPHP$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"NexusPHP$\"|content=\"NexusPHP$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Nginx",
-    "category": "web_server",
+    "category": "reverse_proxies",
     "sources": [
       {
         "source": "headers",
@@ -4580,7 +4609,7 @@
   },
   {
     "technology": "nopCommerce",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -4591,7 +4620,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"nopCommerce$\"|content=\"nopCommerce$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"nopCommerce$\"|content=\"nopCommerce$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4604,7 +4633,7 @@
   },
   {
     "technology": "Nuxt.js",
-    "category": "web_framework",
+    "category": "static_site_generator",
     "sources": [
       {
         "source": "html_body",
@@ -4633,7 +4662,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Odoo\"|content=\"Odoo\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Odoo\"|content=\"Odoo\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4652,7 +4681,7 @@
   },
   {
     "technology": "Okta",
-    "category": "security_ssl",
+    "category": "authentication",
     "sources": [
       {
         "source": "html_body",
@@ -4664,18 +4693,18 @@
   },
   {
     "technology": "Open Classifieds",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"author\"[^>]*content=\"open\\-classifieds\\.com\"|content=\"open\\-classifieds\\.com\"[^>]*name=\"author\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"author\"[^>]*content=\"open\\-classifieds\\.com\"|content=\"open\\-classifieds\\.com\"[^>]*name=\"author\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"copyright\"[^>]*content=\"Open Classifieds ?([0-9.]+)?\"|content=\"Open Classifieds ?([0-9.]+)?\"[^>]*name=\"copyright\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"copyright\"[^>]*content=\"Open Classifieds ?([0-9.]+)?\"|content=\"Open Classifieds ?([0-9.]+)?\"[^>]*name=\"copyright\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -4693,7 +4722,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Open Journal Systems(?: ([\\d.]+))?\"|content=\"Open Journal Systems(?: ([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Open Journal Systems(?: ([\\d.]+))?\"|content=\"Open Journal Systems(?: ([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -4712,7 +4741,7 @@
   },
   {
     "technology": "OpenBSD httpd",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -4725,7 +4754,7 @@
   },
   {
     "technology": "OpenCart",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -4762,7 +4791,7 @@
   },
   {
     "technology": "OpenResty",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -4842,7 +4871,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"EPiServer\"|content=\"EPiServer\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"EPiServer\"|content=\"EPiServer\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4855,7 +4884,7 @@
   },
   {
     "technology": "Oracle Application Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -4868,7 +4897,7 @@
   },
   {
     "technology": "Oracle Commerce",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "headers",
@@ -4881,7 +4910,7 @@
   },
   {
     "technology": "Oracle HTTP Server",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -4926,7 +4955,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Orchard\"|content=\"Orchard\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Orchard\"|content=\"Orchard\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -4939,7 +4968,7 @@
   },
   {
     "technology": "OroCommerce",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -4969,7 +4998,7 @@
   },
   {
     "technology": "osCommerce",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -5072,7 +5101,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"apple\\-itunes\\-app\"[^>]*content=\"app\\-id=543672169\"|content=\"app\\-id=543672169\"[^>]*name=\"apple\\-itunes\\-app\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"apple\\-itunes\\-app\"[^>]*content=\"app\\-id=543672169\"|content=\"app\\-id=543672169\"[^>]*name=\"apple\\-itunes\\-app\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5090,14 +5119,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Pagekit\"|content=\"Pagekit\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Pagekit\"|content=\"Pagekit\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "PayPal",
-    "category": "payment_processor",
+    "category": "payment_processors",
     "sources": [
       {
         "source": "headers",
@@ -5109,7 +5138,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"id\"[^>]*content=\"in\\-context\\-paypal\\-metadata\"|content=\"in\\-context\\-paypal\\-metadata\"[^>]*name=\"id\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"id\"[^>]*content=\"in\\-context\\-paypal\\-metadata\"|content=\"in\\-context\\-paypal\\-metadata\"[^>]*name=\"id\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5122,7 +5151,7 @@
   },
   {
     "technology": "Perfmatters",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "html_body",
@@ -5184,7 +5213,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"PHP\\-Nuke\"|content=\"PHP\\-Nuke\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"PHP\\-Nuke\"|content=\"PHP\\-Nuke\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5220,7 +5249,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"copyright\"[^>]*content=\"phpBB\\ Group\"|content=\"phpBB\\ Group\"[^>]*name=\"copyright\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"copyright\"[^>]*content=\"phpBB\\ Group\"|content=\"phpBB\\ Group\"[^>]*name=\"copyright\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5331,7 +5360,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"phpSQLiteCMS(?: (.+))?$\"|content=\"phpSQLiteCMS(?: (.+))?$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"phpSQLiteCMS(?: (.+))?$\"|content=\"phpSQLiteCMS(?: (.+))?$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -5343,7 +5372,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"phpwind(?: v([0-9-]+))?\"|content=\"phpwind(?: v([0-9-]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"phpwind(?: v([0-9-]+))?\"|content=\"phpwind(?: v([0-9-]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5356,7 +5385,7 @@
   },
   {
     "technology": "Phusion Passenger",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -5400,14 +5429,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Piwigo\\s\"|content=\"Piwigo\\s\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Piwigo\\s\"|content=\"Piwigo\\s\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "PixelYourSite",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "html_body",
@@ -5419,7 +5448,7 @@
   },
   {
     "technology": "Play",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "cookies",
@@ -5462,7 +5491,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Pligg\"|content=\"Pligg\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Pligg\"|content=\"Pligg\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5480,7 +5509,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Plone\"|content=\"Plone\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Plone\"|content=\"Plone\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5493,7 +5522,7 @@
   },
   {
     "technology": "Plupload",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -5517,7 +5546,7 @@
   },
   {
     "technology": "PrestaShop",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "headers",
@@ -5535,7 +5564,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"PrestaShop\"|content=\"PrestaShop\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"PrestaShop\"|content=\"PrestaShop\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5585,7 +5614,7 @@
   },
   {
     "technology": "ProfilePress",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "cookies",
@@ -5608,7 +5637,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Sitefinity\\s([\\S]{3,9})\"|content=\"Sitefinity\\s([\\S]{3,9})\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Sitefinity\\s([\\S]{3,9})\"|content=\"Sitefinity\\s([\\S]{3,9})\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -5627,7 +5656,7 @@
   },
   {
     "technology": "Prototype",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -5730,7 +5759,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Quick\\.CMS(?: v([\\d.]+))?\"|content=\"Quick\\.CMS(?: v([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Quick\\.CMS(?: v([\\d.]+))?\"|content=\"Quick\\.CMS(?: v([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5779,18 +5808,18 @@
   },
   {
     "technology": "React",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"description\"[^>]*content=\"Web site created using create-react-app$\"|content=\"Web site created using create-react-app$\"[^>]*name=\"description\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"description\"[^>]*content=\"Web site created using create-react-app$\"|content=\"Web site created using create-react-app$\"[^>]*name=\"description\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"og:image\"[^>]*content=\"%REACT_APP_SEO_IMAGE_URL%\"|content=\"%REACT_APP_SEO_IMAGE_URL%\"[^>]*name=\"og:image\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"og:image\"[^>]*content=\"%REACT_APP_SEO_IMAGE_URL%\"|content=\"%REACT_APP_SEO_IMAGE_URL%\"[^>]*name=\"og:image\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5858,7 +5887,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"description\"[^>]*content=\"Redmine\"|content=\"Redmine\"[^>]*name=\"description\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"description\"[^>]*content=\"Redmine\"|content=\"Redmine\"[^>]*name=\"description\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5871,7 +5900,7 @@
   },
   {
     "technology": "Resin",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -5884,7 +5913,7 @@
   },
   {
     "technology": "Riot.js",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -5901,19 +5930,19 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"RiteCMS(?: (.+))?\"|content=\"RiteCMS(?: (.+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"RiteCMS(?: (.+))?\"|content=\"RiteCMS(?: (.+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Rocket.Chat",
-    "category": "customer_support",
+    "category": "live_chat",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Rocket.Chat$\"|content=\"Rocket.Chat$\"[^>]*name=\"application\\-name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Rocket.Chat$\"|content=\"Rocket.Chat$\"[^>]*name=\"application\\-name\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -5945,7 +5974,7 @@
   },
   {
     "technology": "Ruby on Rails",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -5970,7 +5999,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"csrf\\-param\"[^>]*content=\"authenticity_token$\"|content=\"authenticity_token$\"[^>]*name=\"csrf\\-param\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"csrf\\-param\"[^>]*content=\"authenticity_token$\"|content=\"authenticity_token$\"[^>]*name=\"csrf\\-param\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -5995,7 +6024,7 @@
   },
   {
     "technology": "Salesforce",
-    "category": "customer_support",
+    "category": "crm",
     "sources": [
       {
         "source": "cookies",
@@ -6008,12 +6037,26 @@
         "match_type": "regex",
         "pattern": "<[^>]+=\"brandQuaternaryFgrs\"",
         "confidence": 0.75
+      },
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "salesforce.com",
+        "confidence": 0.85
+      },
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "regex",
+        "pattern": "^00D[A-Za-z0-9]{12}=",
+        "confidence": 0.75
       }
     ]
   },
   {
     "technology": "SAP",
-    "category": "customer_support",
+    "category": "crm",
     "sources": [
       {
         "source": "headers",
@@ -6026,7 +6069,7 @@
   },
   {
     "technology": "SAP Commerce Cloud",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "headers",
@@ -6056,7 +6099,7 @@
   },
   {
     "technology": "script.aculo.us",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -6068,7 +6111,7 @@
   },
   {
     "technology": "Select2",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -6116,7 +6159,7 @@
   },
   {
     "technology": "Sharetribe",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
@@ -6128,7 +6171,7 @@
   },
   {
     "technology": "Shiny",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -6141,7 +6184,7 @@
   },
   {
     "technology": "Shopware",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "headers",
@@ -6172,7 +6215,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Shopware\"|content=\"Shopware\"[^>]*name=\"application\\-name\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"application\\-name\"[^>]*content=\"Shopware\"|content=\"Shopware\"[^>]*name=\"application\\-name\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6232,7 +6275,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"SilverStripe\"|content=\"SilverStripe\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"SilverStripe\"|content=\"SilverStripe\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6245,7 +6288,7 @@
   },
   {
     "technology": "SimpleSAMLphp",
-    "category": "security_ssl",
+    "category": "authentication",
     "sources": [
       {
         "source": "cookies",
@@ -6311,14 +6354,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Sitepark\\sInformation\\sEnterprise\\sServer\\s-\\sIES\\sGenerator\\sv([\\d\\.]+)$\"|content=\"Sitepark\\sInformation\\sEnterprise\\sServer\\s-\\sIES\\sGenerator\\sv([\\d\\.]+)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Sitepark\\sInformation\\sEnterprise\\sServer\\s-\\sIES\\sGenerator\\sv([\\d\\.]+)$\"|content=\"Sitepark\\sInformation\\sEnterprise\\sServer\\s-\\sIES\\sGenerator\\sv([\\d\\.]+)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Smartstore",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -6335,7 +6378,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Smart[sS]tore(.NET)? (.+)$\"|content=\"Smart[sS]tore(.NET)? (.+)$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Smart[sS]tore(.NET)? (.+)$\"|content=\"Smart[sS]tore(.NET)? (.+)$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6354,7 +6397,7 @@
   },
   {
     "technology": "Socket.io",
-    "category": "javascript_framework",
+    "category": "javascript_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -6384,14 +6427,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"(?:^|\\s)SPIP(?:\\s([\\d.]+(?:\\s\\[\\d+\\])?))?\"|content=\"(?:^|\\s)SPIP(?:\\s([\\d.]+(?:\\s\\[\\d+\\])?))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"(?:^|\\s)SPIP(?:\\s([\\d.]+(?:\\s\\[\\d+\\])?))?\"|content=\"(?:^|\\s)SPIP(?:\\s([\\d.]+(?:\\s\\[\\d+\\])?))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Spree",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
@@ -6403,7 +6446,7 @@
   },
   {
     "technology": "Spring",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -6439,7 +6482,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Squiz\\ Matrix\"|content=\"Squiz\\ Matrix\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Squiz\\ Matrix\"|content=\"Squiz\\ Matrix\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6514,7 +6557,7 @@
   },
   {
     "technology": "Stripe",
-    "category": "payment_processor",
+    "category": "payment_processors",
     "sources": [
       {
         "source": "cookies",
@@ -6539,6 +6582,13 @@
         "match_type": "contains",
         "pattern": "js.stripe.com",
         "confidence": 0.8
+      },
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "stripe-verification=",
+        "confidence": 0.85
       }
     ]
   },
@@ -6590,19 +6640,19 @@
   },
   {
     "technology": "SvelteKit",
-    "category": "css_framework",
+    "category": "ui_frameworks",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"SvelteKit\"|content=\"SvelteKit\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"SvelteKit\"|content=\"SvelteKit\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Sylius",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
@@ -6620,7 +6670,7 @@
   },
   {
     "technology": "Symfony",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "cookies",
@@ -6643,7 +6693,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Sympa$\"|content=\"Sympa$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Sympa$\"|content=\"Sympa$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6661,14 +6711,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Textpattern\"|content=\"Textpattern\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Textpattern\"|content=\"Textpattern\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "ThinkPHP",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -6687,7 +6737,7 @@
   },
   {
     "technology": "thttpd",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -6712,12 +6762,12 @@
   },
   {
     "technology": "TomatoCart",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"TomatoCart\"|content=\"TomatoCart\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"TomatoCart\"|content=\"TomatoCart\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -6765,7 +6815,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Typecho( [\\d.]+)?\"|content=\"Typecho( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Typecho( [\\d.]+)?\"|content=\"Typecho( [\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -6777,7 +6827,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"TYPO3\\s+(?:CMS\\s+)?(?:[\\d.]+)?(?:\\s+CMS)?\"|content=\"TYPO3\\s+(?:CMS\\s+)?(?:[\\d.]+)?(?:\\s+CMS)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"TYPO3\\s+(?:CMS\\s+)?(?:[\\d.]+)?(?:\\s+CMS)?\"|content=\"TYPO3\\s+(?:CMS\\s+)?(?:[\\d.]+)?(?:\\s+CMS)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6828,7 +6878,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"umbraco\"|content=\"umbraco\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"umbraco\"|content=\"umbraco\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6854,7 +6904,7 @@
   },
   {
     "technology": "Uvicorn",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -6867,7 +6917,7 @@
   },
   {
     "technology": "Vaadin",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -6945,7 +6995,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"vBulletin ?([\\d.]+)?\"|content=\"vBulletin ?([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"vBulletin ?([\\d.]+)?\"|content=\"vBulletin ?([\\d.]+)?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -6958,7 +7008,7 @@
   },
   {
     "technology": "VirtueMart",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
@@ -6970,7 +7020,7 @@
   },
   {
     "technology": "Web2py",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "headers",
@@ -6982,7 +7032,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Web2py\"|content=\"Web2py\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Web2py\"|content=\"Web2py\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -7019,13 +7069,13 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"DC\\.title\"[^>]*content=\"webEdition\"|content=\"webEdition\"[^>]*name=\"DC\\.title\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"DC\\.title\"[^>]*content=\"webEdition\"|content=\"webEdition\"[^>]*name=\"DC\\.title\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"webEdition\"|content=\"webEdition\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"webEdition\"|content=\"webEdition\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -7037,14 +7087,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Weblication\u00ae CMS$\"|content=\"Weblication\u00ae CMS$\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Weblication\u00ae CMS$\"|content=\"Weblication\u00ae CMS$\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "WEBrick",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -7062,14 +7112,14 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"WebsiteBaker\"|content=\"WebsiteBaker\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"WebsiteBaker\"|content=\"WebsiteBaker\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "WebSphere",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "cookies",
@@ -7081,7 +7131,7 @@
   },
   {
     "technology": "Welcart",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -7116,7 +7166,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"WikkaWiki\"|content=\"WikkaWiki\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"WikkaWiki\"|content=\"WikkaWiki\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -7129,7 +7179,7 @@
   },
   {
     "technology": "Wink",
-    "category": "javascript_framework",
+    "category": "mobile_frameworks",
     "sources": [
       {
         "source": "html_body",
@@ -7141,7 +7191,7 @@
   },
   {
     "technology": "WooCommerce",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "cookies",
@@ -7152,7 +7202,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"WooCommerce ([\\d.]+)\"|content=\"WooCommerce ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"WooCommerce ([\\d.]+)\"|content=\"WooCommerce ([\\d.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -7171,7 +7221,7 @@
   },
   {
     "technology": "Wordfence",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "html_body",
@@ -7202,7 +7252,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"WordPress(?: ([\\d.]+))?\"|content=\"WordPress(?: ([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"WordPress(?: ([\\d.]+))?\"|content=\"WordPress(?: ([\\d.]+))?\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -7245,7 +7295,7 @@
   },
   {
     "technology": "WPForms",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "html_body",
@@ -7257,7 +7307,7 @@
   },
   {
     "technology": "WPML",
-    "category": "plugin",
+    "category": "wordpress_plugins",
     "sources": [
       {
         "source": "cookies",
@@ -7268,7 +7318,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"WPML\\sver\\:([\\d\\.]+)\"|content=\"WPML\\sver\\:([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"WPML\\sver\\:([\\d\\.]+)\"|content=\"WPML\\sver\\:([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -7281,7 +7331,7 @@
   },
   {
     "technology": "Xajax",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -7323,7 +7373,7 @@
   },
   {
     "technology": "Xitami",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -7341,7 +7391,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"author\"[^>]*content=\"XiunoBBS\\s([\\d\\.]+)\"|content=\"XiunoBBS\\s([\\d\\.]+)\"[^>]*name=\"author\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"author\"[^>]*content=\"XiunoBBS\\s([\\d\\.]+)\"|content=\"XiunoBBS\\s([\\d\\.]+)\"[^>]*name=\"author\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -7353,7 +7403,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"XOOPS\"|content=\"XOOPS\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"XOOPS\"|content=\"XOOPS\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -7365,7 +7415,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"XpressEngine\"|content=\"XpressEngine\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"XpressEngine\"|content=\"XpressEngine\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -7377,7 +7427,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"wiki\"[^>]*content=\"xwiki\"|content=\"xwiki\"[^>]*name=\"wiki\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"wiki\"[^>]*content=\"xwiki\"|content=\"xwiki\"[^>]*name=\"wiki\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -7402,7 +7452,7 @@
   },
   {
     "technology": "Yaws",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -7415,25 +7465,25 @@
   },
   {
     "technology": "Yclas",
-    "category": "ecommerce_platform",
+    "category": "ecommerce",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"author\"[^>]*content=\"open\\-classifieds\\.com\"|content=\"open\\-classifieds\\.com\"[^>]*name=\"author\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"author\"[^>]*content=\"open\\-classifieds\\.com\"|content=\"open\\-classifieds\\.com\"[^>]*name=\"author\")[^>]*>",
         "confidence": 0.9
       },
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"copyright\"[^>]*content=\"(?:Open Classifieds|Yclas)\\s([0-9.]+)?\"|content=\"(?:Open Classifieds|Yclas)\\s([0-9.]+)?\"[^>]*name=\"copyright\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"copyright\"[^>]*content=\"(?:Open Classifieds|Yclas)\\s([0-9.]+)?\"|content=\"(?:Open Classifieds|Yclas)\\s([0-9.]+)?\"[^>]*name=\"copyright\")[^>]*>",
         "confidence": 0.9
       }
     ]
   },
   {
     "technology": "Yii",
-    "category": "web_framework",
+    "category": "web_frameworks",
     "sources": [
       {
         "source": "cookies",
@@ -7475,7 +7525,7 @@
   },
   {
     "technology": "YUI",
-    "category": "javascript_framework",
+    "category": "javascript_libraries",
     "sources": [
       {
         "source": "html_body",
@@ -7504,7 +7554,7 @@
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"Author\"[^>]*content=\"ZABBIX\\ SIA\"|content=\"ZABBIX\\ SIA\"[^>]*name=\"Author\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"Author\"[^>]*content=\"ZABBIX\\ SIA\"|content=\"ZABBIX\\ SIA\"[^>]*name=\"Author\")[^>]*>",
         "confidence": 0.9
       },
       {
@@ -7517,7 +7567,7 @@
   },
   {
     "technology": "Zend",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -7536,12 +7586,12 @@
   },
   {
     "technology": "Zeta Producer",
-    "category": "plugin",
+    "category": "page_builders",
     "sources": [
       {
         "source": "html_body",
         "match_type": "regex",
-        "pattern": "<meta[^>]*(?:name=\"generator\"[^>]*content=\"Zeta Producer ([\\d\\.]+)\"|content=\"Zeta Producer ([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
+        "pattern": "(?i)<meta[^>]*(?:name=\"generator\"[^>]*content=\"Zeta Producer ([\\d\\.]+)\"|content=\"Zeta Producer ([\\d\\.]+)\"[^>]*name=\"generator\")[^>]*>",
         "confidence": 0.9
       }
     ]
@@ -7561,7 +7611,7 @@
   },
   {
     "technology": "Zope",
-    "category": "web_server",
+    "category": "web_servers",
     "sources": [
       {
         "source": "headers",
@@ -7569,6 +7619,58 @@
         "match_type": "regex",
         "confidence": 0.85,
         "pattern": "^Zope/"
+      }
+    ]
+  },
+  {
+    "technology": "Dropbox",
+    "category": "digital_asset_management",
+    "sources": [
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "dropbox-domain-verification",
+        "confidence": 0.85
+      }
+    ]
+  },
+  {
+    "technology": "Imgix",
+    "category": "cdn",
+    "sources": [
+      {
+        "source": "dns",
+        "field": "start_of_authority",
+        "match_type": "contains",
+        "pattern": ".imgix.net",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "technology": "Keybase",
+    "category": "security",
+    "sources": [
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "keybase-site-verification",
+        "confidence": 0.85
+      }
+    ]
+  },
+  {
+    "technology": "Notion",
+    "category": "page_builders",
+    "sources": [
+      {
+        "source": "dns",
+        "field": "txt_records",
+        "match_type": "contains",
+        "pattern": "notion-domain-verification=",
+        "confidence": 0.85
       }
     ]
   }

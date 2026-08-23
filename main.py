@@ -2,8 +2,8 @@ import json
 
 import pandas as pd
 from fetch_modules.fetch_httpRequests import http_fetch
+from fetch_modules.fetch_dns import dns_fetch
 from detector import signature_matches
-from dataclasses import dataclass
 from concurrent.futures import ThreadPoolExecutor
 
 final_result=[]
@@ -13,6 +13,7 @@ list_of_domains=df["root_domain"].astype(str).tolist()
 
 def append_to_final(domain):
     domain_result=http_fetch(domain)
+    dns_result=dns_fetch(domain)
     result={}
     result["domain_name"]=domain_result.domain_name
     result["status_code"]=domain_result.status_code
@@ -22,7 +23,7 @@ def append_to_final(domain):
     if domain_result.hasResponse is False:
         result["technologies"]=[]
     else:
-        matches=signature_matches(domain_result.response_text, domain_result.headers, domain_result.cookies)
+        matches=signature_matches(domain_result.response_text, domain_result.headers, domain_result.cookies,dns_result)
         result["technologies"]=matches
     #print(result)
     final_result.append(result)

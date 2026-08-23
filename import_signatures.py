@@ -1,10 +1,13 @@
 import glob
 import json
 import re
+import signal
 
 WEBAPP_TECHNOLOGIES_DIRECTORY = "src/technologies"
 WEBAPP_CATEGORIES_PATH = "src/categories.json"
-OUTPUT_SIGNATURES_PATH = "signatures.json"
+
+REQUIRE_CPE = True
+OUTPUT_SIGNATURES_PATH = "signatures.json" if REQUIRE_CPE else "signatures_no_cpe_experiment.json"
 
 HEADERS_SOURCE_CONFIDENCE = 0.85
 COOKIES_SOURCE_CONFIDENCE = 0.75
@@ -12,39 +15,33 @@ META_GENERATOR_CONFIDENCE = 0.90
 SCRIPT_SOURCE_CONFIDENCE = 0.80
 HTML_BODY_CONFIDENCE = 0.75
 
-WEBAPP_CATEGORY_ID_TO_TAXONOMY = {
-    1: "cms",
-    6: "ecommerce_platform",
-    10: "analytics",
-    12: "javascript_framework",
-    16: "security_ssl",
-    17: "font_service",
-    18: "web_framework",
-    22: "web_server",
-    23: "caching",
-    31: "cdn",
-    32: "marketing_tag_manager",
-    41: "payment_processor",
-    42: "marketing_tag_manager",
-    51: "plugin",
-    52: "customer_support",
-    53: "customer_support",
-    54: "plugin",
-    59: "javascript_framework",
-    66: "css_framework",
-    67: "security_ssl",
-    69: "security_ssl",
-    70: "security_ssl",
-    75: "email_marketing",
-    80: "plugin",
-    87: "plugin",
-    88: "hosting_provider",
-    90: "plugin",
-    100: "plugin",
-}
-
 UNESCAPED_REGEX_METACHARACTER_PATTERN = re.compile(r'(?<!\\)[\[\]\(\)\+\*\?\{\}\|\^\$]')
 REGEX_ESCAPE_CLASS_PATTERN = re.compile(r'\\[dDsSwWbB]')
+
+REGEX_SAFETY_TEST_STRING = "qwertyuiopasdfghjklzxcvbnm" * 4000
+REGEX_SAFETY_TIMEOUT_SECONDS = 1
+DROPPED_UNSAFE_REGEX_PATTERNS = []
+
+
+class RegexSafetyTimeout(Exception):
+    pass
+
+
+def raise_regex_safety_timeout(signum, frame):
+    raise RegexSafetyTimeout()
+
+
+def pattern_is_regex_safe(technology_name, pattern_text):
+    signal.signal(signal.SIGALRM, raise_regex_safety_timeout)
+    signal.alarm(REGEX_SAFETY_TIMEOUT_SECONDS)
+    try:
+        re.search(pattern_text, REGEX_SAFETY_TEST_STRING)
+        return True
+    except RegexSafetyTimeout:
+        DROPPED_UNSAFE_REGEX_PATTERNS.append((technology_name, pattern_text))
+        return False
+    finally:
+        signal.alarm(0)
 
 
 def strip_webapp_suffix(raw_pattern):
@@ -91,12 +88,7 @@ def classify_match_type_and_pattern(raw_pattern):
     return "contains", literal_pattern
 
 
-def format_category_name_as_taxonomy_string(category_name):
-    lowercase_name = category_name.lower()
-    return re.sub(r'[^a-z0-9]+', '_', lowercase_name).strip('_')
-
-
-def fall_back_to_webapp_category_name(category_ids, categories_json):
+def resolve_category(category_ids, categories_json):
     if not category_ids:
         return None
 
@@ -105,31 +97,8 @@ def fall_back_to_webapp_category_name(category_ids, categories_json):
         key=lambda category_id: categories_json[str(category_id)]["priority"],
     )
     raw_category_name = categories_json[str(most_primary_category_id)]["name"]
-    return format_category_name_as_taxonomy_string(raw_category_name)
-
-
-def resolve_category(category_ids, categories_json):
-    mapped_categories = set()
-    for category_id in category_ids:
-        taxonomy_name = WEBAPP_CATEGORY_ID_TO_TAXONOMY.get(category_id)
-        if taxonomy_name is not None:
-            mapped_categories.add(taxonomy_name)
-
-    if not mapped_categories:
-        return fall_back_to_webapp_category_name(category_ids, categories_json)
-
-    if len(mapped_categories) == 1:
-        return next(iter(mapped_categories))
-
-    def lowest_priority_for_category(taxonomy_name):
-        matching_priorities = [
-            categories_json[str(category_id)]["priority"]
-            for category_id in category_ids
-            if WEBAPP_CATEGORY_ID_TO_TAXONOMY.get(category_id) == taxonomy_name
-        ]
-        return min(matching_priorities)
-
-    return min(mapped_categories, key=lowest_priority_for_category)
+    lowercase_name = raw_category_name.lower()
+    return re.sub(r'[^a-z0-9]+', '_', lowercase_name).strip('_')
 
 
 def build_dict_field_sources(field_values, source_name, base_confidence):
@@ -180,23 +149,19 @@ def build_meta_generator_sources(meta_values, base_confidence):
     source_entries = []
 
     for meta_name, raw_pattern in meta_values.items():
-        pattern_text = strip_webapp_suffix(raw_pattern)
-        if pattern_text == "":
+        stripped_pattern = strip_webapp_suffix(raw_pattern)
+        if stripped_pattern.startswith("^"):
+            stripped_pattern = stripped_pattern[1:]
+
+        match_type, pattern_text = classify_match_type_and_pattern(stripped_pattern)
+        if match_type == "exists":
             continue
 
-        if pattern_text.startswith("^"):
-            pattern_text = pattern_text[1:]
-
-        if pattern_is_valid_regex(pattern_text) and pattern_looks_like_regex(pattern_text):
-            value_pattern = pattern_text
-        else:
-            literal_value = unescape_literal_pattern(strip_literal_anchors(pattern_text))
-            value_pattern = re.escape(literal_value)
-
+        value_pattern = pattern_text if match_type == "regex" else re.escape(pattern_text)
         escaped_meta_name = re.escape(meta_name)
         name_then_content = f'name="{escaped_meta_name}"[^>]*content="{value_pattern}"'
         content_then_name = f'content="{value_pattern}"[^>]*name="{escaped_meta_name}"'
-        same_tag_pattern = f'<meta[^>]*(?:{name_then_content}|{content_then_name})[^>]*>'
+        same_tag_pattern = f'(?i)<meta[^>]*(?:{name_then_content}|{content_then_name})[^>]*>'
 
         source_entries.append({
             "source": "html_body",
@@ -239,6 +204,57 @@ def build_sources_for_technology(entry):
     return sources
 
 
+HARDCODED_DNS_SOURCES_BY_TECHNOLOGY = {
+    "Cloudflare": [
+        {"source": "dns", "field": "name_servers", "match_type": "contains", "pattern": ".cloudflare.com", "confidence": 0.8},
+        {"source": "dns", "field": "start_of_authority", "match_type": "contains", "pattern": ".cloudflare.com", "confidence": 0.8},
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "cloudflare_dashboard_sso=", "confidence": 0.85},
+    ],
+    "Docker": [
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "docker-verification=", "confidence": 0.85},
+    ],
+    "Hostinger": [
+        {"source": "dns", "field": "start_of_authority", "match_type": "regex", "pattern": "\\.(?:dns-parking|hostinger)\\.com", "confidence": 0.8},
+    ],
+    "MailChimp": [
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "spf.mandrillapp.com", "confidence": 0.8},
+    ],
+    "Salesforce": [
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "salesforce.com", "confidence": 0.85},
+        {"source": "dns", "field": "txt_records", "match_type": "regex", "pattern": "^00D[A-Za-z0-9]{12}=", "confidence": 0.75},
+    ],
+    "Stripe": [
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "stripe-verification=", "confidence": 0.85},
+    ],
+}
+
+HARDCODED_DNS_ONLY_TECHNOLOGIES = [
+    {"technology": "Dropbox", "category": "digital_asset_management", "sources": [
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "dropbox-domain-verification", "confidence": 0.85},
+    ]},
+    {"technology": "Imgix", "category": "cdn", "sources": [
+        {"source": "dns", "field": "start_of_authority", "match_type": "contains", "pattern": ".imgix.net", "confidence": 0.8},
+    ]},
+    {"technology": "Keybase", "category": "security", "sources": [
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "keybase-site-verification", "confidence": 0.85},
+    ]},
+    {"technology": "Notion", "category": "page_builders", "sources": [
+        {"source": "dns", "field": "txt_records", "match_type": "contains", "pattern": "notion-domain-verification=", "confidence": 0.85},
+    ]},
+]
+
+
+def merge_hardcoded_dns_technologies(technologies):
+    by_name = {technology["technology"]: technology for technology in technologies}
+
+    for name, dns_sources in HARDCODED_DNS_SOURCES_BY_TECHNOLOGY.items():
+        if name in by_name:
+            by_name[name]["sources"].extend(dns_sources)
+
+    technologies.extend(HARDCODED_DNS_ONLY_TECHNOLOGIES)
+    return technologies
+
+
 def main():
     with open(WEBAPP_CATEGORIES_PATH, encoding="utf-8") as categories_file:
         categories_json = json.load(categories_file)
@@ -253,7 +269,7 @@ def main():
             entries = json.load(technologies_file)
 
         for technology_name, entry in entries.items():
-            if "cpe" not in entry:
+            if REQUIRE_CPE and "cpe" not in entry:
                 skipped_no_cpe_count += 1
                 continue
 
@@ -263,6 +279,11 @@ def main():
                 continue
 
             sources = build_sources_for_technology(entry)
+            sources = [
+                source_entry for source_entry in sources
+                if source_entry["match_type"] not in ("regex", "key_regex")
+                or pattern_is_regex_safe(technology_name, source_entry["pattern"])
+            ]
             if not sources:
                 skipped_no_usable_source_names.append(technology_name)
                 continue
@@ -272,6 +293,8 @@ def main():
                 "category": category,
                 "sources": sources,
             })
+
+    technologies = merge_hardcoded_dns_technologies(technologies)
 
     with open(OUTPUT_SIGNATURES_PATH, "w", encoding="utf-8") as output_file:
         json.dump(technologies, output_file, indent=2)
@@ -289,8 +312,11 @@ def main():
     print(f"technologies lost - no cpe identifier: {skipped_no_cpe_count}")
     print(f"technologies lost - cpe present but zero category ids at all: {skipped_no_category_at_all_count}")
     print(f"technologies lost - cpe and category ok, but only js/dom signal (unreachable): {len(skipped_no_usable_source_names)}")
-    print(f"technologies written to signatures.json: {len(technologies)}")
+    print(f"technologies written to {OUTPUT_SIGNATURES_PATH}: {len(technologies)}")
     print(f"total source entries across those technologies: {total_source_entries}")
+    print(f"regex patterns dropped for catastrophic-backtracking risk: {len(DROPPED_UNSAFE_REGEX_PATTERNS)}")
+    for technology_name, pattern in DROPPED_UNSAFE_REGEX_PATTERNS:
+        print(f"  {technology_name}: {pattern}")
     print()
     print("technologies lost to js/dom-only signal:")
     for name in skipped_no_usable_source_names:
