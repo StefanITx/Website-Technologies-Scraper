@@ -96,7 +96,7 @@ def signature_matches(html_text, headers, cookies,dns_result):
 
 
 if __name__ == "__main__":
-    data=signature_matches(mock_html, mock_headers,mock_cookies)
+    data=signature_matches(mock_html, mock_headers,mock_cookies,None)
 
     for match in data:
         print(match)

@@ -64,7 +64,7 @@ fetcher does not do).
 
 Every regex pattern is tested against an adversarial string with a wall-clock timeout before
 it's allowed into the file at all - a permanent guard against catastrophic backtracking
-(see Main Issues, below), not something checked once and forgotten.
+(see the debate topics below), not something checked once and forgotten.
 
 ## Output
 
@@ -145,7 +145,7 @@ can match text sitting inside an HTML comment or an unrelated script literal ins
 markup. I found and fixed one concrete, related bug project-wide: a real page I inspected used
 `<meta content="Microsoft Word 10" name="Generator">` (capital G) - HTML attribute names are
 case-insensitive per spec, but my matching regex wasn't, so this and every other meta-tag-based
-signature I had (roughly 100 of them) were silently blind to any page that capitalized its
+signature I had (135 of them) were silently blind to any page that capitalized its
 attributes differently. I fixed it by scoping an inline case-insensitive flag to just my meta
 co-occurrence patterns specifically, not my `scriptSrc`/`html` patterns, which check genuinely
 case-sensitive file paths.
